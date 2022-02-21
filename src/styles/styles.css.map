@@ -1,0 +1,13 @@
+{
+    "version": 3,
+    "mappings": "AAMA,AAAA,IAAI,CAAC;EACD,MAAM,EAAE,CAAC;EACT,OAAO,EAAE,CAAC;CACb",
+    "sources": [
+        "styles.scss",
+        "_variables.scss",
+        "_home.scss",
+        "_footer.scss",
+        "_navbar.scss"
+    ],
+    "names": [],
+    "file": "styles.css"
+}
