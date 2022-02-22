@@ -2,9 +2,8 @@ import React from 'react';
 
 const FooterComponent = () => {
     return (
-        <div>
+        <div className="footer-container">
             <h1>FooterComponent</h1>
-            <button className="ui button">Hello</button>
         </div>
     );
 };

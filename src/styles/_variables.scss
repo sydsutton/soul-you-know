@@ -1,0 +1,10 @@
+$light-color: rgb(231, 231, 231);
+$dark-color: rgb(31, 31, 31);
+
+
+@mixin flexCenter($direction) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: $direction;
+}
