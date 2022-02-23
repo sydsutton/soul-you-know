@@ -10,7 +10,7 @@ import {
   } from 'semantic-ui-react'
   import {Link} from "react-router-dom"
 
-const SidebarComponent = ({sidebarOpen, setSidebarOpen}) => {
+const SidebarComponent = ({sidebarOpen, setSidebarOpen, location}) => {
     return (
         <div>
             <Grid>
@@ -18,30 +18,47 @@ const SidebarComponent = ({sidebarOpen, setSidebarOpen}) => {
                     <Sidebar
                         as={Menu}
                         animation='overlay'
-                        icon='labeled'
                         direction="right"
-                        inverted
                         onHide={() => setSidebarOpen(false)}
                         vertical
                         visible={sidebarOpen}
+                        className="sidebar"
                         width='thin'
                     >
-                        <Menu.Item as='a'>
-                            <Link to="/">
-                                <Icon name='home' />
+                        <Menu.Item 
+                            onClick={() => setSidebarOpen(false)}
+                            className={location.pathname === "/" ? "active" : ""}
+                            style={{padding: "0"}}
+                        >
+                            <Link to="/" className="sidebar-link">
                                 Home
                             </Link>
                         </Menu.Item>
-                        <Menu.Item as='a'>
-                            <Link to="/shows">
-                                <Icon name='ticket' />
+                        <Menu.Item 
+                            onClick={() => setSidebarOpen(false)}
+                            className={location.pathname === "/shows" ? "active" : ""}
+                            style={{padding: "0"}}
+                        >
+                            <Link to="/shows" className="sidebar-link">
                                 Shows
                             </Link>
                         </Menu.Item>
-                        <Menu.Item as='a'>
-                            <Link to="/music">
-                                <Icon name='music' />
+                        <Menu.Item 
+                            onClick={() => setSidebarOpen(false)}
+                            className={location.pathname === "/music" ? "active" : ""}
+                            style={{padding: "0"}}
+                        >
+                            <Link to="/music" className="sidebar-link">
                                 Music
+                            </Link>
+                        </Menu.Item>
+                        <Menu.Item 
+                            onClick={() => setSidebarOpen(false)}
+                            className={location.pathname === "/contact" ? "active" : ""}
+                            style={{padding: "0"}}
+                        >
+                            <Link to="/contact" className="sidebar-link">
+                                Contact
                             </Link>
                         </Menu.Item>
                     </Sidebar>

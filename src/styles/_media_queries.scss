@@ -1,0 +1,26 @@
+@media (min-width: 200px) and (max-width: 550px) {
+
+    .navbar {
+        justify-content: space-evenly;
+
+        .navbar-links {
+            display: none;
+        }
+    
+        .brand-container{
+            margin: 0 auto;
+        }
+    
+        .bars-icon {
+            display: block;
+        }
+
+        .empty-div {
+            width: 2rem;
+        }
+    }
+
+    .jumbo-overlay {
+        font-size: 2em;
+    }
+}

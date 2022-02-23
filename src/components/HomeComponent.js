@@ -3,34 +3,9 @@ import React from 'react';
 const HomeComponent = () => {
     return (
         <div>
-            <h1>HomeComponent</h1>
-            <h1>HomeComponent</h1>
-            <h1>HomeComponent</h1>
-            <h1>HomeComponent</h1>
-            <h1>HomeComponent</h1>
-            <h1>HomeComponent</h1>
-            <h1>HomeComponent</h1>
-            <h1>HomeComponent</h1>
-            <h1>HomeComponent</h1>
-            <h1>HomeComponent</h1>
-            <h1>HomeComponent</h1>
-            <h1>HomeComponent</h1>
-            <h1>HomeComponent</h1>
-            <h1>HomeComponent</h1>
-            <h1>HomeComponent</h1>
-            <h1>HomeComponent</h1>
-            <h1>HomeComponent</h1>
-            <h1>HomeComponent</h1>
-            <h1>HomeComponent</h1>
-            <h1>HomeComponent</h1>
-            <h1>HomeComponent</h1>
-            <h1>HomeComponent</h1>
-            <h1>HomeComponent</h1>
-            <h1>HomeComponent</h1>
-            <h1>HomeComponent</h1>
-            <h1>HomeComponent</h1>
-            <h1>HomeComponent</h1>
-            <h1>HomeComponent</h1>
+            <div className="jumbotron">
+                <h1 className="jumbo-overlay">Soul You Know</h1>
+            </div>
             <h1>HomeComponent</h1>
         </div>
     );

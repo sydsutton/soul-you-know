@@ -1,8 +1,11 @@
 @import "./variables";
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap');
 
 @import "./home";
 @import "./footer";
 @import "./navbar";
+@import "./media_queries";
 
 body {
     margin: 0;
@@ -18,4 +21,8 @@ body {
     position: relative;
     min-height: 100vh;
     padding-top: 8rem;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Julius Sans One', sans-serif;
 }
