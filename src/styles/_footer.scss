@@ -2,7 +2,7 @@
     position: absolute;
     bottom: 0;
     width: 100%;
-    background: $dark-color;
+    background: $light-color;
     @include flexCenter(row);
 }
 
@@ -11,7 +11,7 @@
     @include flexCenter(row);
 
     li a{
-        color: $primary-color;
+        color: $dark-color;
         margin-right: .5rem;
         &:hover {
             color: $highlight-color;

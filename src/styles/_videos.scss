@@ -1,0 +1,11 @@
+.videos-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 1rem;
+
+    iframe {
+        margin: .5rem;
+    }
+}

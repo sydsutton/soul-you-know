@@ -1,0 +1,4 @@
+.songs-container {
+    @include flexCenter(column);
+    padding: 1rem;
+}
