@@ -5,3 +5,16 @@
     background: $dark-color;
     @include flexCenter(row);
 }
+
+.footer-list {
+    list-style: none;
+    @include flexCenter(row);
+
+    li a{
+        color: $primary-color;
+        margin-right: .5rem;
+        &:hover {
+            color: $highlight-color;
+        }
+    }
+}

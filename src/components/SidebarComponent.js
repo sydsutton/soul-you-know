@@ -21,6 +21,7 @@ const SidebarComponent = ({sidebarOpen, setSidebarOpen, location}) => {
                         direction="right"
                         onHide={() => setSidebarOpen(false)}
                         vertical
+                        inverted
                         visible={sidebarOpen}
                         className="sidebar"
                         width='thin'
@@ -36,20 +37,20 @@ const SidebarComponent = ({sidebarOpen, setSidebarOpen, location}) => {
                         </Menu.Item>
                         <Menu.Item 
                             onClick={() => setSidebarOpen(false)}
-                            className={location.pathname === "/shows" ? "active" : ""}
-                            style={{padding: "0"}}
-                        >
-                            <Link to="/shows" className="sidebar-link">
-                                Shows
-                            </Link>
-                        </Menu.Item>
-                        <Menu.Item 
-                            onClick={() => setSidebarOpen(false)}
                             className={location.pathname === "/music" ? "active" : ""}
                             style={{padding: "0"}}
                         >
                             <Link to="/music" className="sidebar-link">
                                 Music
+                            </Link>
+                        </Menu.Item>
+                        <Menu.Item 
+                            onClick={() => setSidebarOpen(false)}
+                            className={location.pathname === "/videos" ? "active" : ""}
+                            style={{padding: "0"}}
+                        >
+                            <Link to="/videos" className="sidebar-link">
+                                Videos
                             </Link>
                         </Menu.Item>
                         <Menu.Item 

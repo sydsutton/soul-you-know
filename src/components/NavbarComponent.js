@@ -13,7 +13,11 @@ const NavbarComponent = () => {
 
     return (
         <Sticky className="ui fixed menu" style={{border: "none"}}>
-            <SidebarComponent sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} location={location}/>
+            <SidebarComponent 
+                sidebarOpen={sidebarOpen} 
+                setSidebarOpen={setSidebarOpen} 
+                location={location}
+            />
             <div className="navbar">
                 <div className="empty-div"></div>
                 <Link to="/" className="brand-container">
@@ -24,10 +28,10 @@ const NavbarComponent = () => {
                         <Link to="/" className={location.pathname==="/" ? "active nav-link" : "nav-link"}>Home</Link>
                     </li>
                     <li>
-                        <Link to="/shows" className={location.pathname==="/shows" ? "active nav-link" : "nav-link"}>Shows</Link>
+                        <Link to="/music" className={location.pathname==="/music" ? "active nav-link" : "nav-link"}>Music</Link>
                     </li>
                     <li>
-                        <Link to="/music" className={location.pathname==="/music" ? "active nav-link" : "nav-link"}>Music</Link>
+                        <Link to="/videos" className={location.pathname==="/videos" ? "active nav-link" : "nav-link"}>Videos</Link>
                     </li>
                     <li>
                         <Link to="/contact" className={location.pathname==="/contact" ? "active nav-link" : "nav-link"}>Contact</Link>
@@ -37,6 +41,7 @@ const NavbarComponent = () => {
                     <i 
                         className="bars large icon" 
                         onClick={() => setSidebarOpen(true)}
+                        style={{color: "#ddd"}}
                     />
                 </div>
             </div>

@@ -1,3 +1,7 @@
+.container {
+    padding-bottom: 3rem;
+}
+
 .jumbotron {
     background-image: url('../images/jumbo.JPG');
     height: 20rem;
@@ -14,11 +18,37 @@
     position: absolute;
     top: 50%;
     color: $dark-color;
-    background-image: linear-gradient(90deg, rgba(219, 219, 219, 0.9),rgba(247, 247, 247, 0.9));
+    background-image: linear-gradient(90deg, rgba(219, 219, 219, 0.2),rgba(219, 219, 219, 1), rgba(247, 247, 247, 0.2));
     width: 100vw;
     text-align: center;
     font-size: 2.5em;
     padding: .6rem;
     text-shadow: 3px 3px 3px rgba(0,0,0,.5);
     letter-spacing: .3em;
+}
+
+.featured-songs-container {
+    @include flexCenter(row);
+    justify-content: space-evenly;
+}
+
+.iframe-container {
+    color: $primary-color;
+    text-align: center;
+    margin: 3rem auto;
+}
+
+.divider {
+    margin: -1rem 0 2rem 0;
+}
+
+.shows-container {
+    text-align: center;
+    color: $primary-color;
+    margin-bottom: 2rem;
+
+    .show-table {
+        max-width: 50rem;
+        margin: 0 auto;
+    }
 }
