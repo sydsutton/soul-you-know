@@ -1,11 +1,22 @@
 .videos-container {
-    display: flex;
+    @include flexCenter(row);
     flex-wrap: wrap;
-    justify-content: center;
-    margin: 0 auto;
-    padding: 1rem;
+    padding-bottom: 10rem;
 
     iframe {
         margin: .5rem;
+        min-width: 100%;
+        height: 100%;
+    }
+
+    .video-placeholder {
+        padding: 0 -2rem;
+        margin: 1rem;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 460px;
+        height: 250px;
     }
 }

@@ -247,17 +247,42 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin: 0 auto;
-  padding: 1rem;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding-bottom: 10rem;
 }
 
 .videos-container iframe {
   margin: .5rem;
+  min-width: 100%;
+  height: 100%;
+}
+
+.videos-container .video-placeholder {
+  padding: 0 -2rem;
+  margin: 1rem;
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 460px;
+  height: 250px;
 }
 
 .songs-container {
@@ -281,7 +306,7 @@
   width: 40rem;
   margin: 0 auto;
   border: 1px solid #952e8b;
-  background-image: linear-gradient(135deg, #952e8b 70%, #bf157f);
+  background-image: linear-gradient(135deg, #e7e7e7 70%, #b9b9b9);
   padding: 2rem;
   border-radius: 12px;
   margin-bottom: 3rem;

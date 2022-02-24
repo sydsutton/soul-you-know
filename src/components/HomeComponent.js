@@ -1,5 +1,6 @@
 import React from 'react';
 import ShowTable from "./ShowTableComponent"
+// import ReactPlayer from 'react-player'
 
 import {
     Divider,
@@ -12,6 +13,14 @@ const HomeComponent = () => {
             <div className="jumbotron">
                 <h1 className="jumbo-overlay">Soul You Know</h1>
             </div>
+            {/* <ReactPlayer
+                url={jumboVideo}
+                playing
+                loop
+                muted
+                width="100%"
+                height="100%"
+            /> */}
             <div className="featured-container">
                 <h2>Featured Songs</h2>
                 <Divider style={{margin: "-.5rem 0 2rem"}}/>

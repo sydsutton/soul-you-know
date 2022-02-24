@@ -25,34 +25,26 @@ const ShowTableComponent = () => {
 
             <Table.Body>
                 <Table.Row>
-                    <Table.Cell>No Name Specified</Table.Cell>
-                    <Table.Cell>Unknown</Table.Cell>
-                    <Table.Cell>None</Table.Cell>
-                    <Table.Cell>None</Table.Cell>
-                    <Table.Cell>None</Table.Cell>
-                </Table.Row>
-
-                <Table.Row>
-                    <Table.Cell>Jimmy</Table.Cell>
-                    <Table.Cell>Requires Action</Table.Cell>
-                    <Table.Cell>None</Table.Cell>
-                    <Table.Cell>None</Table.Cell>
+                    <Table.Cell>March 3rd</Table.Cell>
+                    <Table.Cell>Gallery Cabaret</Table.Cell>
+                    <Table.Cell>TBD</Table.Cell>
+                    <Table.Cell>$5 suggested donation</Table.Cell>
                     <Table.Cell>None</Table.Cell>
                 </Table.Row>
 
                 <Table.Row>
-                    <Table.Cell>Jamie</Table.Cell>
-                    <Table.Cell>Unknown</Table.Cell>
-                    <Table.Cell>Unknown</Table.Cell>
-                    <Table.Cell>Unknown</Table.Cell>
-                    <Table.Cell>UNknown</Table.Cell>
+                    <Table.Cell>April 10th</Table.Cell>
+                    <Table.Cell>The Chop Shop</Table.Cell>
+                    <Table.Cell>Doors @ 5PM</Table.Cell>
+                    <Table.Cell>$12</Table.Cell>
+                    <Table.Cell>None</Table.Cell>
                 </Table.Row>
 
                 <Table.Row>
-                    <Table.Cell>Jill</Table.Cell>
-                    <Table.Cell>Unknown</Table.Cell>
-                    <Table.Cell>Unknown</Table.Cell>
-                    <Table.Cell>None</Table.Cell>
+                    <Table.Cell>April 22nd</Table.Cell>
+                    <Table.Cell>Gallery Cabaret</Table.Cell>
+                    <Table.Cell>TBD</Table.Cell>
+                    <Table.Cell>$5 suggested donation</Table.Cell>
                     <Table.Cell>None</Table.Cell>
                 </Table.Row>
             </Table.Body>

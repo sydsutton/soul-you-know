@@ -44,7 +44,6 @@ const ContactComponent = () => {
     return (
         <Container>
             <Form 
-                inverted 
                 as="form"
                 className="form" 
                 error="true" 
