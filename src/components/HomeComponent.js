@@ -1,20 +1,18 @@
 import React from 'react';
 import ShowTable from "./ShowTableComponent"
-import background from "../images/background.png"
 import { Parallax } from "react-scroll-parallax"
-
-// import ReactPlayer from 'react-player'
 
 import {
     Divider,
-    Container
+    Container,
+    Grid
 } from "semantic-ui-react"
 
 const HomeComponent = () => {
     return (
         <>
             <Parallax speed={-50} className="hero-container">
-                <img src={background} className="hero-image" />
+                <div className="hero-image"/>
             </Parallax>
 
             <div className="featured-container">
