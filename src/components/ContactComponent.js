@@ -18,6 +18,7 @@ const ContactComponent = () => {
         description: ""
     }
     const [values, setValues] = useState(initialFormValues)
+    const [loading, setLoading] = useState(false)
 
     const handleChange = (e) => {
         setValues(values => ({
@@ -34,17 +35,19 @@ const ContactComponent = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault()
+        setLoading(true)
 
         emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, "#contact-form", USER_ID)
           .then(() => {
             setValues(initialFormValues)
-            
+            setLoading(false)
             Swal.fire({
               icon: "success",
               title: "Thanks! We'll get back to you soon!"
             })
           }, (error) => {
             console.log(error.text);
+            setLoading(false)
             Swal.fire({
               icon: "error",
               title: "Ooops, something went wrong",
@@ -83,10 +86,10 @@ const ContactComponent = () => {
                     <div className="contact-title-container">
                         <h2>Want us to play a show?</h2>
                         <Divider />
-                        <h5>Reach out. We'll get back to you ASAP</h5>
+                        <p>Reach out. We'll get back to you ASAP</p>
                     </div>
                     
-                    <Form handleChange={handleChange} values={values} handleSubmit={handleSubmit} />
+                    <Form handleChange={handleChange} values={values} handleSubmit={handleSubmit} loading={loading} />
 
                 </Grid.Column>
             </Grid>

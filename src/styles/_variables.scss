@@ -10,3 +10,8 @@ $primary-color: #952e8b;
     justify-content: center;
     flex-direction: $direction;
 }
+
+
+@mixin testBorder {
+    border: 1px solid red;
+}

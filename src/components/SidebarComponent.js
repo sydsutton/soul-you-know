@@ -24,7 +24,6 @@ const SidebarComponent = ({sidebarOpen, setSidebarOpen, location}) => {
                         inverted
                         visible={sidebarOpen}
                         className="sidebar"
-                        width='thin'
                     >
                         <Menu.Item 
                             onClick={() => setSidebarOpen(false)}
@@ -59,7 +58,7 @@ const SidebarComponent = ({sidebarOpen, setSidebarOpen, location}) => {
                             style={{padding: "0"}}
                         >
                             <Link to="/contact" className="sidebar-link">
-                                Contact
+                                Contact/ Book
                             </Link>
                         </Menu.Item>
                     </Sidebar>

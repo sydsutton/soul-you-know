@@ -34,7 +34,7 @@ const NavbarComponent = () => {
                         <Link to="/videos" className={location.pathname==="/videos" ? "active nav-link" : "nav-link"}>Videos</Link>
                     </li>
                     <li>
-                        <Link to="/contact" className={location.pathname==="/contact" ? "active nav-link" : "nav-link"}>Contact</Link>
+                        <Link to="/contact" className={location.pathname==="/contact" ? "active nav-link" : "nav-link"}>Contact/ Book</Link>
                     </li>
                 </ul>
                 <div className="bars-icon">

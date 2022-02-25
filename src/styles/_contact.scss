@@ -4,7 +4,6 @@
     background-image: linear-gradient(135deg, $light-color 70%, rgb(185, 185, 185));
     padding: 2rem;
     border-radius: 12px;
-    margin-bottom: 3rem;
 }
 
 .contact-title-container {
@@ -25,4 +24,15 @@
     @include flexCenter(row);
     color: $light-color;
     margin: 1rem 0;
+}
+
+.loader-container {
+    position: absolute;
+    bottom: 10%;
+    right: 50%;
+}
+
+.loader-icon{
+    background-color: transparent;
+    color: $dark-color;
 }

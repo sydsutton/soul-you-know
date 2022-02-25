@@ -1,5 +1,5 @@
 import React from 'react';
-import {youtubeList} from "../youtubeList"
+import {youtubeList} from "../data/youtubeList"
 import {
     Placeholder
 } from "semantic-ui-react"

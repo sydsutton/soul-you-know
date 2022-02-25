@@ -3,16 +3,15 @@ import React from 'react';
 import {
     Form,
     Button,
-    Input
+    Input,
+    Loader
 } from "semantic-ui-react"
 
-const ContactForm = ({handleChange, values, handleSubmit}) => {
+const ContactForm = ({handleChange, values, handleSubmit, loading }) => {
     return (
         <Form 
             as="form"
             className="form" 
-            error="true" 
-            success="true"
             onSubmit={handleSubmit}
             id="contact-form"
         >
@@ -63,7 +62,13 @@ const ContactForm = ({handleChange, values, handleSubmit}) => {
                     onChange={handleChange} 
                 />
             </Form.Field>
-            <Button type='submit' color="blue">Submit</Button>
+            <div className="loader-container">
+                {loading ? 
+                    <Loader active className="loader-icon" color="purple">Sending...</Loader>
+                : null 
+                }
+            </div>
+            <Button disabled={loading} type='submit' color="blue">Submit</Button>
         </Form>
     );
 };

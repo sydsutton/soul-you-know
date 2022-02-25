@@ -1,5 +1,5 @@
 import React from 'react';
-import {musicList} from "../musicList"
+import {musicList} from "../data/musicList"
 import {
     Container
 } from "semantic-ui-react"

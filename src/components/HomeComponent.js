@@ -1,6 +1,7 @@
 import React from 'react';
 import ShowTable from "./ShowTableComponent"
 import { Parallax } from "react-scroll-parallax"
+import {showsList} from "../data/showsList"
 
 import {
     Divider,
@@ -11,7 +12,7 @@ import {
 const HomeComponent = () => {
     return (
         <>
-            <Parallax speed={-50} className="hero-container">
+            <Parallax speed={-30} className="hero-container">
                 <div className="hero-image"/>
             </Parallax>
 
@@ -46,7 +47,18 @@ const HomeComponent = () => {
                 <Container>
                     <h2>Upcoming Shows</h2>
                     <Divider style={{margin: "-.5rem 0 2rem"}}/>
-                    <ShowTable />
+                    {/* <ShowTable /> */}
+
+                    {showsList.map((show, index) => {
+                        return (
+                            <div className="show-container" key={index}>
+                                <div className="show-title">
+                                    <h3>{show.date}</h3>
+                                    <h4>{show.venue}</h4>
+                                </div>
+                            </div>
+                        )
+                    })}
                 </Container>
             </div>
         </>
