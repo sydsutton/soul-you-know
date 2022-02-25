@@ -6,7 +6,7 @@ import {
 
 const VideosComponent = () => {
     return (
-        <div className="videos-container">
+        <div className="videos-container" style={{marginTop: "9rem"}}>
             {youtubeList.map((video, index) => {
                 return (
                     <div className="ui placeholder video-placeholder" style={{maxWidth: "100%", maxHeight: "100%"}}>

@@ -6,7 +6,7 @@ import {
 
 const MusicComponent = () => {
     return (
-        <Container className="songs-container">
+        <Container className="songs-container" style={{marginTop: "9rem"}}>
             {musicList.map((song, index) => {
                 return (
                     <iframe 

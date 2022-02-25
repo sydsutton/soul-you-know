@@ -12,18 +12,18 @@ import { ParallaxProvider } from "react-scroll-parallax"
 function App() {
   return (
     <div className="app">
-      <ParallaxProvider>
         <Navbar />
-        
-        <Routes>
-          <Route exact path="/" element={<Home />} />
-          <Route path="/music" element={<Music />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/videos" element={<Videos />} />
-        </Routes>
 
+        <ParallaxProvider>
+          <Routes>
+            <Route exact path="/" element={<Home />} />
+            <Route path="/music" element={<Music />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/videos" element={<Videos />} />
+          </Routes>
+        </ParallaxProvider>
+        
         <Footer />
-      </ParallaxProvider>
     </div>
   );
 }

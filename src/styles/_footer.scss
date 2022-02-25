@@ -1,8 +1,10 @@
 .footer-container {
     position: absolute;
     bottom: 0;
+    z-index: 10;
     width: 100%;
     background: $light-color;
+    margin-top: 5rem;
     @include flexCenter(row);
 }
 

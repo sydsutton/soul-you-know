@@ -1,52 +1,38 @@
 @import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap");
-.jumbotron {
-  background-image: url("../images/jumbo.JPG");
-  height: 20rem;
-  margin-top: 0;
-  background-position-y: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  width: 100vw;
-  margin-top: -8rem;
-  position: relative;
-}
-
 .hero-container {
-  height: 60vh;
+  height: 100vh;
   width: 100vw;
   position: relative;
-  top: 0;
   z-index: -20;
-  margin-top: -6.5rem;
+  margin-top: 40vh;
 }
 
 .hero-image {
-  width: 100vw;
-  -o-object-fit: cover;
-     object-fit: cover;
+  width: 70vw;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
-.main-container {
+.featured-container {
+  position: relative;
+  margin-top: -60vh;
+  z-index: 10;
+  background-image: -webkit-gradient(linear, left top, right top, from(#161616), to(#2e2e2e));
+  background-image: linear-gradient(90deg, #161616, #2e2e2e);
+  padding: 1rem 0;
+  color: #952e8b;
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.shows-container {
   position: relative;
   z-index: 10;
   background-image: -webkit-gradient(linear, left top, right top, from(#161616), to(#2e2e2e));
   background-image: linear-gradient(90deg, #161616, #2e2e2e);
   padding: 1rem 0;
-}
-
-.jumbo-overlay {
-  position: absolute;
-  top: 50%;
-  color: #1f1f1f;
-  background-image: -webkit-gradient(linear, left top, right top, from(rgba(219, 219, 219, 0.2)), color-stop(#dbdbdb), to(rgba(247, 247, 247, 0.2)));
-  background-image: linear-gradient(90deg, rgba(219, 219, 219, 0.2), #dbdbdb, rgba(247, 247, 247, 0.2));
-  width: 100vw;
-  text-align: center;
-  font-size: 2.5em;
-  padding: .6rem;
-  text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
-  letter-spacing: .3em;
+  padding-bottom: 5rem;
 }
 
 .featured-songs-container {
@@ -66,12 +52,6 @@
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-}
-
-.featured-container {
-  color: #952e8b;
-  text-align: center;
-  margin: 3rem auto;
 }
 
 .iframe-container {
@@ -107,8 +87,10 @@
 .footer-container {
   position: absolute;
   bottom: 0;
+  z-index: 10;
   width: 100%;
   background: #e7e7e7;
+  margin-top: 5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -396,8 +378,7 @@
 body {
   margin: 0;
   padding: 0;
-  background-image: -webkit-gradient(linear, left top, right top, from(#161616), to(#2e2e2e));
-  background-image: linear-gradient(90deg, #161616, #2e2e2e);
+  background: #060606;
   min-height: 100vh;
   max-width: 100vw;
   background-size: cover;
@@ -407,7 +388,6 @@ body {
 .app {
   position: relative;
   min-height: 100vh;
-  padding-top: 8rem;
 }
 
 h1, h2, h3, h4, h5 {

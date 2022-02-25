@@ -56,7 +56,7 @@ const ContactComponent = () => {
       const iconSize = "big"
 
     return (
-        <Container>
+        <Container style={{marginTop: "9rem"}}>
             <Grid mobile={16} tablet={8} computer={8} className="social-container">
                 <Grid.Column mobile={16} tablet={8} computer={8} className="contact-title-container">
                     <div className="contact-title-container">               
