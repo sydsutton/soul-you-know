@@ -1,19 +1,30 @@
 import React, {useState} from 'react';
+import Form from "./ContactForm"
 import emailjs from "emailjs-com"
 import Swal from "sweetalert2"
 import {
     Container,
-    Form,
-    Button,
-    Input
+    Divider,
+    Icon,
+    Grid
 } from "semantic-ui-react"
 
 const ContactComponent = () => {
-    const [name, setName] = useState("")
-    const [email, setEmail] = useState("")
-    const [venue, setVenue] = useState("")
-    const [date, setDate] = useState("")
-    const [description, setDescription] = useState("")
+    const initialFormValues = {
+        name: "",
+        email: "",
+        venue: "",
+        date: "",
+        description: ""
+    }
+    const [values, setValues] = useState(initialFormValues)
+
+    const handleChange = (e) => {
+        setValues(values => ({
+            ...values,
+            [e.target.name]: e.target.value
+        }))
+    }
 
     const SERVICE_ID = process.env.REACT_APP_SERVICE_ID
     const TEMPLATE_ID = process.env.REACT_APP_TEMPLATE_ID
@@ -25,11 +36,12 @@ const ContactComponent = () => {
         e.preventDefault()
 
         emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, "#contact-form", USER_ID)
-          .then((result) => {
-            console.log(result.text)
+          .then(() => {
+            setValues(initialFormValues)
+            
             Swal.fire({
               icon: "success",
-              title: "Message Sent Successfully"
+              title: "Thanks! We'll get back to you soon!"
             })
           }, (error) => {
             console.log(error.text);
@@ -41,61 +53,43 @@ const ContactComponent = () => {
           });
       }
 
+      const iconSize = "big"
+
     return (
         <Container>
-            <Form 
-                as="form"
-                className="form" 
-                error="true" 
-                success="true"
-                onSubmit={(e) => handleSubmit(e)}
-                id="contact-form"
-            >
-                <Form.Field
-                    control={Input}
-                    label="Name"
-                    placeholder="Name"
-                    value={name} 
-                    onChange={(e) => setName(e.target.value)} 
-                    required
-                />
-                <Form.Field>
-                    <label>Email</label>
-                    <input 
-                        type="email"
-                        placeholder='Email' 
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)} 
-                        required/>
-                </Form.Field>
-                <Form.Field>
-                    <label>Venue</label>
-                    <input 
-                        type="text"
-                        placeholder='Venue' 
-                        value={venue}
-                        onChange={(e) => setVenue(e.target.value)} 
-                        required/>
-                </Form.Field>
-                <Form.Field>
-                    <label>Date</label>
-                    <input 
-                        type="date"
-                        placeholder='Date' 
-                        value={date}
-                        onChange={(e) => setDate(e.target.value)} 
-                        required/>
-                </Form.Field>
-                <Form.Field>
-                    <label>Description (optional)</label>
-                    <textarea 
-                        placeholder="Anything else we should know?"
-                        value={description}
-                        onChange={(e) => setDescription(e.target.value)} 
-                    />
-                </Form.Field>
-                <Button type='submit'>Submit</Button>
-            </Form>
+            <Grid mobile={16} tablet={8} computer={8} className="social-container">
+                <Grid.Column mobile={16} tablet={8} computer={8} className="contact-title-container">
+                    <div className="contact-title-container">               
+                        <h2>Contact Us</h2>
+                        <Divider/>
+                    </div>
+                    <ul className="social-list">
+                        <li className="contact-item-container">
+                            <Icon name="mail" size={iconSize}/>
+                            <p>soulyouknowband@gmail.com</p>
+                        </li>
+                        <li className="contact-item-container">
+                            <Icon name="instagram" size={iconSize}/>
+                            <p>https://www.instagram.com/soulyouknow/</p>
+                        </li>
+                        <li className="contact-item-container">
+                            <Icon name="facebook" size={iconSize} />
+                            <p>https://www.facebook.com/soulyouknowband</p>
+                        </li> 
+                    </ul>
+                </Grid.Column>
+
+                <Grid.Column mobile={16} tablet={8} computer={8}>
+                    <div className="contact-title-container">
+                        <h2>Want us to play a show?</h2>
+                        <Divider />
+                        <h5>Reach out. We'll get back to you ASAP</h5>
+                    </div>
+                    
+                    <Form handleChange={handleChange} values={values} handleSubmit={handleSubmit} />
+
+                </Grid.Column>
+            </Grid>
         </Container>
     );
 };

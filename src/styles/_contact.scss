@@ -1,9 +1,28 @@
 .form {
     width: 40rem;
     margin: 0 auto;
-    border: 1px solid $primary-color;
     background-image: linear-gradient(135deg, $light-color 70%, rgb(185, 185, 185));
     padding: 2rem;
     border-radius: 12px;
     margin-bottom: 3rem;
+}
+
+.contact-title-container {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: $primary-color;
+}
+
+.social-list {
+    list-style: none;
+    margin-bottom: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.contact-item-container {
+    @include flexCenter(row);
+    color: $light-color;
+    margin: 1rem 0;
 }

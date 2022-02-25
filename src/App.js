@@ -7,20 +7,23 @@ import Contact from "./components/ContactComponent"
 import Videos from "./components/VideosComponent"
 
 import {Routes, Route} from "react-router-dom"
+import { ParallaxProvider } from "react-scroll-parallax"
 
 function App() {
   return (
     <div className="app">
-      <Navbar />
-      
-      <Routes>
-        <Route exact path="/" element={<Home />} />
-        <Route path="/music" element={<Music />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/videos" element={<Videos />} />
-      </Routes>
+      <ParallaxProvider>
+        <Navbar />
+        
+        <Routes>
+          <Route exact path="/" element={<Home />} />
+          <Route path="/music" element={<Music />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/videos" element={<Videos />} />
+        </Routes>
 
-      <Footer />
+        <Footer />
+      </ParallaxProvider>
     </div>
   );
 }

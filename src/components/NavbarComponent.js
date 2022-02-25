@@ -19,9 +19,9 @@ const NavbarComponent = () => {
                 location={location}
             />
             <div className="navbar">
-                <div className="empty-div"></div>
                 <Link to="/" className="brand-container">
                     <img src={logo} alt="soul you know logo" height="40" />
+                    <h5>Soul You Know</h5>
                 </Link>
                 <ul className="navbar-links">
                     <li>

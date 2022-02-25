@@ -4,6 +4,7 @@
     width: 100vw;
     @include flexCenter(row);
     padding: .5em;
+    box-shadow: 5px 5px 5px rgba(0,0,0,.2);
 
     .navbar-links {
         @include flexCenter(row);
@@ -19,6 +20,14 @@
     }
 }
 
+.brand-container {
+    @include flexCenter(row);
+
+    h5{
+        margin-top: 0;
+        margin-left: .5rem;
+    }
+}
 .nav-link {
     color: $light-color;
     padding: 1rem 1.5rem;

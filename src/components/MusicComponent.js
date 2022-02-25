@@ -1,9 +1,12 @@
 import React from 'react';
 import {musicList} from "../musicList"
+import {
+    Container
+} from "semantic-ui-react"
 
 const MusicComponent = () => {
     return (
-        <div className="songs-container">
+        <Container className="songs-container">
             {musicList.map((song, index) => {
                 return (
                     <iframe 
@@ -18,7 +21,7 @@ const MusicComponent = () => {
                     />
                 )
             })}
-        </div>
+        </Container>
     );
 };
 
