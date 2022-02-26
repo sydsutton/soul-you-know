@@ -485,6 +485,12 @@
   color: #505050;
 }
 
+.portal-container {
+  text-align: center;
+  width: 20rem;
+  margin: 2rem;
+}
+
 .portal-buttons {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -502,6 +508,14 @@
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+}
+
+.mailing-input {
+  margin: 1rem;
+}
+
+.portal-p {
+  font-size: .8em;
 }
 
 .bio-container {

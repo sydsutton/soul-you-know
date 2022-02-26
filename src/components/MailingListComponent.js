@@ -15,13 +15,17 @@ const MailingListComponent = () => {
 
     useEffect(() => { 
         let isMounted = true
+
         //getting the mailing list modal to pop up only once per person
-        if(localStorage.getItem("touched") === false){
+
+        if(sessionStorage.getItem("already shown") !== "true"){
             setTimeout(() => {
                 setIsPortalOpen(true)
-                localStorage.setItem("touched", true)
+                sessionStorage.setItem("already shown", true)
             }, 5000)
-        } 
+        } else {
+            console.log("Already shown")
+        }
 
         return () => isMounted = false
     }, [])
@@ -33,15 +37,25 @@ const MailingListComponent = () => {
 
     return (
         <Portal onClose={() => setIsPortalOpen(false)} open={isPortalOpen}>
-            <Segment style={{position: "fixed", top: "0", right: "10%", zIndex: "1000", background: "#ddd"}}>
+            <Segment className="portal-container" style={{position: "fixed", top: "0", right: "10%", zIndex: "1000", background: "#ddd"}}>
                 <Icon 
                     onClick={() => setIsPortalOpen(false)} 
                     name="close" 
                     className="close-x" 
                 />
                 <Header style={{marginTop: "1rem"}}>Sign up for our mailing list!</Header>
+                <p className="portal-p">We'll keep you updated on shows</p>
                 <form onSubmit={handleSubmit}>
-                    <Input type="email" onChange={(e) => setEmail(e.target.value)}/>
+                    <Input 
+                        type="email" 
+                        onChange={(e) => setEmail(e.target.value)}
+                        fluid
+                        focus
+                        icon="mail"
+                        iconPosition='left'
+                        size="small"
+                        style={{margin: "1rem"}}
+                    />
                     <div className="portal-buttons">
                         <Button color="blue" type="submit">Sign up</Button>
                         <Button color="black" onClick={() => setIsPortalOpen(false)}>Close</Button>

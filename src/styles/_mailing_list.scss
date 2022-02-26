@@ -5,7 +5,21 @@
     color: rgb(80, 80, 80);
 }
 
+.portal-container {
+    text-align: center;
+    width: 20rem;
+    margin: 2rem;
+}
+
 .portal-buttons {
     @include flexCenter(row);
     justify-content: space-evenly;
+}
+
+.mailing-input {
+    margin: 1rem;
+}
+
+.portal-p {
+    font-size: .8em;
 }
