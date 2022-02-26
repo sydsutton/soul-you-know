@@ -2,64 +2,92 @@
 @import url("https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap");
 .hero-container {
   width: 100vw;
-  height: 80vh;
-  position: relative;
-  z-index: -20;
+  height: 50vh;
 }
 
 .hero-image {
   background-image: url("../images/cover.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: top;
   height: 100%;
-  position: relative;
-  z-index: -20;
-  max-width: 100%;
 }
 
-.featured-container {
+.middle-container {
+  height: 60vh;
+  width: 100vw;
+}
+
+.middle-image {
+  background-image: url("../images/one.JPG");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  height: 100vh;
+}
+
+.parallax-text {
+  font-size: 3rem;
+  color: #e7e7e7;
+}
+
+.main-container,
+.member-parent-container {
   background-image: -webkit-gradient(linear, left top, right top, from(#161616), to(#2e2e2e));
   background-image: linear-gradient(90deg, #161616, #2e2e2e);
   padding: 2rem 0;
-  color: #952e8b;
+  color: #26c1e0;
   text-align: center;
   position: relative;
   z-index: 10;
-  -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
-          box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: -5px -5px 5px rgba(0, 0, 0, 0.3);
+          box-shadow: -5px -5px 5px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+          box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
 }
 
-.shows-container {
-  background-image: -webkit-gradient(linear, left top, right top, from(#161616), to(#2e2e2e));
-  background-image: linear-gradient(90deg, #161616, #2e2e2e);
-  padding: 1rem 0;
-  padding-bottom: 5rem;
-}
-
-.featured-songs-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+.featured-container {
+  margin-bottom: 4rem;
 }
 
 .iframe-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.show-title {
+  text-align: start;
+}
+
+.show-title h4 {
+  color: #999999;
+  margin-bottom: 0;
+}
+
+.show-title h2 {
+  margin: 0;
+  color: #e7e7e7;
+}
+
+.show-title h5 {
+  margin-top: 0;
+  color: #999999;
+}
+
+.members-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   -webkit-box-pack: center;
@@ -67,26 +95,9 @@
           justify-content: center;
 }
 
-.iframe-container iframe {
-  margin: 1rem 0;
-}
-
-.divider {
-  margin: -1rem 0 2rem 0;
-}
-
-.shows-container {
-  text-align: center;
-  color: #952e8b;
-  margin-bottom: 2rem;
-}
-
-.shows-container .show-table {
-  max-width: 50rem;
-  margin: 0 auto;
-}
-
-.show-title {
+.band-member {
+  margin: .5rem;
+  width: 25rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -96,17 +107,37 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
-.show-title h3, .show-title h4 {
-  margin: 0;
+.band-member .member-image {
+  border-radius: 3px;
+  margin-top: -.5rem;
+  -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+          box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+.band-member .member-name {
+  margin-bottom: 0;
+  padding-left: .5rem;
+  text-align: start;
+}
+
+.band-member .accordian-content {
+  color: #1f1f1f;
+  background-color: white;
+  margin: 1rem;
+  margin-top: 0;
+}
+
+.band-member .click-for-more {
+  font-size: .8em;
+  position: absolute;
+  bottom: 0;
+  right: 1rem;
 }
 
 .footer-container {
@@ -154,7 +185,7 @@
 }
 
 .footer-list li a:hover {
-  color: #bf157f;
+  color: #26c1e0;
 }
 
 .navbar {
@@ -224,8 +255,8 @@
 }
 
 .brand-container h5 {
-  margin-top: 0;
-  margin-left: .5rem;
+  margin: 0;
+  color: #26c1e0;
 }
 
 .nav-link {
@@ -241,7 +272,8 @@
 .active {
   font-weight: bold;
   color: #e7e7e7;
-  background: #952e8b;
+  background: #5766ba;
+  border-radius: 5px;
 }
 
 .sidebar-link {
@@ -286,6 +318,12 @@
   }
   .navbar .empty-div {
     width: 2rem;
+  }
+  .hero-container {
+    height: 50vh;
+  }
+  .hero-image {
+    height: 50vh;
   }
 }
 
@@ -352,15 +390,39 @@
 .form {
   width: 40rem;
   margin: 0 auto;
-  background-image: linear-gradient(135deg, #e7e7e7 70%, #b9b9b9);
+  background-image: linear-gradient(135deg, #5766ba, #26c1e0);
   padding: 2rem;
   border-radius: 12px;
 }
 
-.contact-title-container {
+.contact-parallax {
+  height: 70vh;
+  width: 100vw;
+}
+
+.contact-parallax-image {
+  background-image: url("../images/two.JPG");
+  height: 100%;
+  width: 100vw;
+  background-position: center;
+  background-size: cover;
+}
+
+.contact-container {
+  position: relative;
+  z-index: 10;
+  background-image: -webkit-gradient(linear, left top, right top, from(#161616), to(#2e2e2e));
+  background-image: linear-gradient(90deg, #161616, #2e2e2e);
+}
+
+.contact-title-container,
+.book-container {
   text-align: center;
-  margin-bottom: 2rem;
-  color: #952e8b;
+  color: #26c1e0;
+}
+
+.book-container {
+  margin-bottom: 3rem;
 }
 
 .social-list {
@@ -410,7 +472,8 @@
 body {
   margin: 0;
   padding: 0;
-  background: #161616;
+  background-image: -webkit-gradient(linear, left top, right top, from(#161616), to(#2e2e2e));
+  background-image: linear-gradient(90deg, #161616, #2e2e2e);
   min-height: 100vh;
   max-width: 100vw;
   background-size: cover;

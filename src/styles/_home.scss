@@ -1,74 +1,109 @@
 .hero-container {
     width: 100vw;
-    height: 80vh;
-    position: relative;
-    z-index: -20;
+    height: 50vh;
 }
 
 .hero-image {
     background-image: url("../images/cover.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: top;
     height: 100%;
-    position: relative;
-    z-index: -20;
-    max-width: 100%;
 }
 
+.middle-container {
+    height: 60vh;
+    width: 100vw;
+}
 
-.featured-container {
+.middle-image {
+    background-image: url("../images/one.JPG");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    height: 100vh;
+}
+
+.parallax-text {
+    font-size: 3rem;
+    color: $light-color;
+}
+
+.main-container,
+.member-parent-container {
     background-image: linear-gradient(90deg, rgb(22, 22, 22), rgb(46, 46, 46));
     padding: 2rem 0;
-    color: $primary-color;
+    color: $highlight-color;
     text-align: center;
     position: relative;
     z-index: 10;
-    box-shadow: 5px 5px 5px rgba(0,0,0,.2);
+    box-shadow: -5px -5px 5px rgba(0,0,0,.3);
+    box-shadow: 5px 5px 5px rgba(0,0,0,.3);
 }
 
-.shows-container {
-    background-image: linear-gradient(90deg, rgb(22, 22, 22), rgb(46, 46, 46));
-    padding: 1rem 0;
-    padding-bottom: 5rem;
+.featured-container {
+    margin-bottom: 4rem;
 }
-
-.featured-songs-container {
-    @include flexCenter(row);
-    justify-content: space-evenly;
-}
-
 
 .iframe-container {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
-
-    iframe {
-        margin: 1rem 0;
-    }
-}
-
-.divider {
-    margin: -1rem 0 2rem 0;
-}
-
-.shows-container {
-    text-align: center;
-    color: $primary-color;
-    margin-bottom: 2rem;
-
-    .show-table {
-        max-width: 50rem;
-        margin: 0 auto;
-    }
 }
 
 .show-title{
-    @include flexCenter(row);
-    justify-content: flex-start;
+    text-align: start;
 
-    h3, h4 {
+    h4 {
+        color: rgb(153, 153, 153);
+        margin-bottom: 0;
+    }
+
+    h2 {
         margin: 0;
+        color: $light-color;
+    }
+
+    h5 {
+        margin-top: 0;
+        color: rgb(153, 153, 153);
+    }
+}
+
+.members-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.band-member {
+    margin: .5rem;
+    width: 25rem;
+    @include flexCenter(column);
+
+    .member-image {
+        border-radius: 3px;
+        margin-top: -.5rem;
+        box-shadow: 5px 5px 5px rgba(0,0,0,.2);
+    }
+
+    .member-name {
+        margin-bottom: 0;
+        padding-left: .5rem;
+        text-align: start;
+    }
+
+    .accordian-content {
+        color: $dark-color;
+        background-color: white;
+        margin: 1rem;
+        margin-top: 0;
+    }
+
+    .click-for-more {
+        font-size: .8em;
+        position: absolute;
+        bottom: 0;
+        right: 1rem;
     }
 }

@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import {youtubeList} from "../data/youtubeList"
-import {
-    Placeholder
-} from "semantic-ui-react"
 
 const VideosComponent = () => {
+
+    useEffect(() => {
+        window.scroll(0,0)
+    }, [])
+
     return (
         <div className="videos-container" style={{marginTop: "9rem"}}>
             {youtubeList.map((video, index) => {

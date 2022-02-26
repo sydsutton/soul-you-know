@@ -1,10 +1,15 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import {musicList} from "../data/musicList"
 import {
     Container
 } from "semantic-ui-react"
 
 const MusicComponent = () => {
+
+    useEffect(() => {
+        window.scroll(0,0)
+    }, [])
+
     return (
         <Container className="songs-container" style={{marginTop: "9rem"}}>
             {musicList.map((song, index) => {

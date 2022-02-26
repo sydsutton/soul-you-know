@@ -1,23 +1,23 @@
 export const showsList = [
     {
-        date: "March 3rd",
+        date: "3/3/22",
         venue: "Gallery Cabaret",
         time: "TBD",
         cover: "$5 suggested donation",
-        link: "None"
+        link: "https://www.gallerycabaret.com/"
     },
     {
-        date: "April 10th",
+        date: "4/10/22",
         venue: "The Chop Shop",
         time: "Doors @ 5PM",
         cover: "$12",
-        link: "None"
+        link: "https://chopshopchi.com/"
     },
     {
-        date: "April 22nd",
+        date: "4/22/22",
         venue: "Gallery Cabaret",
         time: "TBD",
         cover: "$5 suggested donation",
-        link: "None"
+        link: "https://www.gallerycabaret.com/"
     },
 ]

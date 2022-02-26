@@ -43,14 +43,13 @@ const ContactForm = ({handleChange, values, handleSubmit, loading }) => {
                 required
             />
             <Form.Field>
-                <label>Date</label>
+                <label>Date (optional)</label>
                 <input 
                     type="date"
                     placeholder='Date' 
                     name="date"
                     value={values.date}
                     onChange={handleChange} 
-                    required
                 />
             </Form.Field>
             <Form.Field>
@@ -68,7 +67,7 @@ const ContactForm = ({handleChange, values, handleSubmit, loading }) => {
                 : null 
                 }
             </div>
-            <Button disabled={loading} type='submit' color="blue">Submit</Button>
+            <Button disabled={loading} type='submit' color="black">Submit</Button>
         </Form>
     );
 };

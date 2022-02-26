@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from "react-router-dom"
 import SidebarComponent from "./SidebarComponent"
-import logo from "../images/navlogo.png"
+import logo2 from "../images/logo2.png"
 import {
     Sticky,
 } from "semantic-ui-react"
@@ -20,8 +20,9 @@ const NavbarComponent = () => {
             />
             <div className="navbar">
                 <Link to="/" className="brand-container">
-                    <img src={logo} alt="soul you know logo" height="40" />
-                    <h5>Soul You Know</h5>
+                    <h5>Soul Y</h5>
+                    <img src={logo2} alt="soul you know logo" height="40" />
+                    <h5>u Know</h5>
                 </Link>
                 <ul className="navbar-links">
                     <li>
