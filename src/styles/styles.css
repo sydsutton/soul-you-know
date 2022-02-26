@@ -21,7 +21,7 @@
   background-image: url("../images/one.JPG");
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: bottom;
+  background-position: center;
   height: 100vh;
 }
 
@@ -97,7 +97,7 @@
 
 .band-member {
   margin: .5rem;
-  width: 25rem;
+  width: 15rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -228,14 +228,14 @@
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  width: 75%;
+  width: 70%;
   margin-left: auto;
   list-style: none;
 }
 
 .navbar .bars-icon {
   display: none;
-  padding-right: 1rem;
+  margin-right: .5rem;
 }
 
 .brand-container {
@@ -252,6 +252,7 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  margin-left: 1rem;
 }
 
 .brand-container h5 {
@@ -322,7 +323,11 @@
   .hero-container {
     height: 50vh;
   }
-  .hero-image {
+  .middle-container {
+    height: 40vh;
+  }
+  .hero-image,
+  .middle-image {
     height: 50vh;
   }
 }
@@ -467,6 +472,32 @@
 .loader-icon {
   background-color: transparent;
   color: #1f1f1f;
+}
+
+.close-x {
+  position: absolute;
+  top: .5rem;
+  right: .5rem;
+  color: #505050;
+}
+
+.portal-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
 body {

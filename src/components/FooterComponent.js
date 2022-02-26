@@ -20,7 +20,7 @@ const FooterComponent = () => {
                     </a>
                 </li> 
                 <li>
-                    <a onClick={() => window.open('https://open.spotify.com/user/3djgyct4z5xr90b7p99ufn0cb', '_blank')}>
+                    <a onClick={() => window.open('https://open.spotify.com/artist/2hxK5s6Gvisb2GOx6Pl1cx', '_blank')}>
                         <Icon name="spotify" size={iconSize} />
                     </a>
                 </li> 

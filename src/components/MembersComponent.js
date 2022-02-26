@@ -28,7 +28,7 @@ const MembersComponent = () => {
                                     onClick={handleClick}
                                 >
                                     <Image src={member.img} className="member-image" />
-                                    <h3 className="member-name">{member.name} ({member.instrument})</h3>
+                                    <h4 className="member-name">{member.name} ({member.instrument})</h4>
                                     <div className="click-for-more">{activeIndex !== index ? "Click for bio" : null}</div>
                                 </Accordion.Title>
                                 <Accordion.Content active={activeIndex === index ? true : false} className="accordian-content">

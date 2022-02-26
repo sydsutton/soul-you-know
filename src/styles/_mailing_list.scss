@@ -1,0 +1,11 @@
+.close-x {
+    position: absolute;
+    top: .5rem;
+    right: .5rem;
+    color: rgb(80, 80, 80);
+}
+
+.portal-buttons {
+    @include flexCenter(row);
+    justify-content: space-evenly;
+}

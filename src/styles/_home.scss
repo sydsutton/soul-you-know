@@ -19,7 +19,7 @@
     background-image: url("../images/one.JPG");
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: bottom;
+    background-position: center;
     height: 100vh;
 }
 
@@ -78,7 +78,7 @@
 
 .band-member {
     margin: .5rem;
-    width: 25rem;
+    width: 15rem;
     @include flexCenter(column);
 
     .member-image {

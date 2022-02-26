@@ -9,19 +9,20 @@
     .navbar-links {
         @include flexCenter(row);
         justify-content: space-evenly;
-        width: 75%;
+        width: 70%;
         margin-left: auto;
         list-style: none;
     }
 
     .bars-icon {
         display: none;
-        padding-right: 1rem;
+        margin-right: .5rem;
     }
 }
 
 .brand-container {
     @include flexCenter(row);
+    margin-left: 1rem;
 
     h5{
         margin: 0;
@@ -43,7 +44,6 @@
     color: $light-color;
     background: $primary-color;
     border-radius: 5px;
-    // background-image: linear-gradient(270deg, $highlight-color, $primary-color 70%);
 }
 
 .sidebar-link {
