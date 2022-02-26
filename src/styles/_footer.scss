@@ -11,12 +11,15 @@
 .footer-list {
     list-style: none;
     @include flexCenter(row);
+    padding-left: 0;
 
     li a{
         color: $dark-color;
         margin-right: .5rem;
+        
         &:hover {
             color: $highlight-color;
+            cursor: pointer;
         }
     }
 }

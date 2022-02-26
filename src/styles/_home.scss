@@ -1,6 +1,6 @@
 .hero-container {
     width: 100vw;
-    height: 50vh;
+    height: 70vh;
 }
 
 .hero-image {
@@ -16,7 +16,7 @@
 }
 
 .middle-image {
-    background-image: url("../images/one.JPG");
+    background-image: url("../images/one.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -36,8 +36,7 @@
     text-align: center;
     position: relative;
     z-index: 10;
-    box-shadow: -5px -5px 5px rgba(0,0,0,.3);
-    box-shadow: 5px 5px 5px rgba(0,0,0,.3);
+    box-shadow: 0px 0px 10px rgba(0,0,0,.9);
 }
 
 .featured-container {
@@ -82,15 +81,14 @@
     @include flexCenter(column);
 
     .member-image {
-        border-radius: 3px;
-        margin-top: -.5rem;
-        box-shadow: 5px 5px 5px rgba(0,0,0,.2);
+        box-shadow: 5px 5px 5px rgba(0,0,0,.3);
     }
 
     .member-name {
         margin-bottom: 0;
         padding-left: .5rem;
         text-align: start;
+        color: $dark-color;
     }
 
     .accordian-content {

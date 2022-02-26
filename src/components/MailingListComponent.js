@@ -14,7 +14,7 @@ const MailingListComponent = () => {
     useEffect(() => { 
         setTimeout(() => {
             setIsPortalOpen(true)
-        }, 3000)
+        }, 5000)
     }, [])
 
     return (

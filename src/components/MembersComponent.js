@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import Bio from "./BioComponent"
 import {members} from "../data/members"
 import {
     Card, 
@@ -9,38 +10,32 @@ import {
 
 const MembersComponent = () => {
     const [activeIndex, setActiveIndex] = useState(-1)
+    const [bioOpen, setBioOpen] = useState(false)
     
     const handleClick = (e, props) => {
         const {index} = props
         index === activeIndex ? setActiveIndex(-1) : setActiveIndex(index)
+        setBioOpen(true)
     }
 
+    const activeMember = members[activeIndex]
 
     return (
         <div className="members-container">
             {members.map((member, index) => {
                 return (
                     <div key={index} className="band-member">
-                        <Card key={index}>
-                            <Accordion className="accordian">
-                                <Accordion.Title 
-                                    index={index} 
-                                    onClick={handleClick}
-                                >
-                                    <Image src={member.img} className="member-image" />
-                                    <h4 className="member-name">{member.name} ({member.instrument})</h4>
-                                    <div className="click-for-more">{activeIndex !== index ? "Click for bio" : null}</div>
-                                </Accordion.Title>
-                                <Accordion.Content active={activeIndex === index ? true : false} className="accordian-content">
-                                    <Divider />
-                                    <Card.Content>
-                                        <Card.Description>
-                                            {member.bio}
-                                        </Card.Description>
-                                    </Card.Content>
-                                </Accordion.Content>
-                            </Accordion>
+                        <Card index={index} onClick={handleClick}>
+                            <Image src={member.img} className="member-image" />
+                            <h4 className="member-name">{member.name} ({member.instrument})</h4>
+                            <div className="click-for-more">{activeIndex !== index ? "Click for bio" : null}</div>
                         </Card>
+
+                        {activeMember ? 
+                            <Bio activeMember={activeMember} bioOpen={bioOpen} setActiveIndex={setActiveIndex} setBioOpen={setBioOpen} />
+                        :
+                        null}
+
                     </div>
                 )
             })}
