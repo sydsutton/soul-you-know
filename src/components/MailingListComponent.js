@@ -4,18 +4,32 @@ import {
     Segment,
     Button,
     Header,
+    Input,
     Icon
 } from "semantic-ui-react"
 
 const MailingListComponent = () => {
 
     const [isPortalOpen, setIsPortalOpen] = useState(false)
+    const [email, setEmail] = useState("")
 
     useEffect(() => { 
-        setTimeout(() => {
-            setIsPortalOpen(true)
-        }, 5000)
+        let isMounted = true
+        //getting the mailing list modal to pop up only once per person
+        if(localStorage.getItem("touched") === false){
+            setTimeout(() => {
+                setIsPortalOpen(true)
+                localStorage.setItem("touched", true)
+            }, 5000)
+        } 
+
+        return () => isMounted = false
     }, [])
+
+    const handleSubmit = (e) => {
+        e.preventDefault()
+        setIsPortalOpen(false)
+    }
 
     return (
         <Portal onClose={() => setIsPortalOpen(false)} open={isPortalOpen}>
@@ -26,10 +40,13 @@ const MailingListComponent = () => {
                     className="close-x" 
                 />
                 <Header style={{marginTop: "1rem"}}>Sign up for our mailing list!</Header>
-                <div className="portal-buttons">
-                    <Button color="primary" onClick={() => setIsPortalOpen(false)}>Sign up</Button>
-                    <Button color="black" onClick={() => setIsPortalOpen(false)}>Close</Button>
-                </div>
+                <form onSubmit={handleSubmit}>
+                    <Input type="email" onChange={(e) => setEmail(e.target.value)}/>
+                    <div className="portal-buttons">
+                        <Button color="blue" type="submit">Sign up</Button>
+                        <Button color="black" onClick={() => setIsPortalOpen(false)}>Close</Button>
+                    </div>
+                </form>
             </Segment>
         </Portal>
     );

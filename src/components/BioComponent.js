@@ -17,7 +17,9 @@ const BioComponent = ({activeMember, bioOpen, setBioOpen, setActiveIndex}) => {
                 className="bio-container"
                 closeIcon
             >
-                <Image className="bio-image" src={activeMember.img} alt={activeMember.name} />
+                <div className="bio-image-container">
+                    <Image className="bio-image" src={activeMember.img} alt={activeMember.name} />
+                </div>
                 <Modal.Header>
                     <h3>{activeMember.name}</h3>
                 </Modal.Header>

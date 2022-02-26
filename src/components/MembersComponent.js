@@ -26,9 +26,13 @@ const MembersComponent = () => {
                 return (
                     <div key={index} className="band-member">
                         <Card index={index} onClick={handleClick}>
-                            <Image src={member.img} className="member-image" />
-                            <h4 className="member-name">{member.name} ({member.instrument})</h4>
-                            <div className="click-for-more">{activeIndex !== index ? "Click for bio" : null}</div>
+                            <div className="member-image-container">
+                                <Image src={member.img} className="member-image" />
+                            </div>
+                            <div style={{padding: "1rem 0"}}>
+                                <h4 className="member-name">{member.name} ({member.instrument})</h4>
+                                <div className="click-for-more">{activeIndex !== index ? "Click for bio" : null}</div>
+                            </div>
                         </Card>
 
                         {activeMember ? 

@@ -3,6 +3,13 @@
     max-height: 100vh;
 }
 
+.bio-image-container {
+    height: 20rem;
+    width: 100%;
+}
+
 .bio-image {
-    max-width: 100%;
+    width: 100%;
+    max-height: 100%;
+    object-fit: cover;
 }

@@ -38,9 +38,10 @@ const HomeComponent = () => {
                                     style={{maxWidth: "30rem", borderRadius: "12px"}}
                                     src="https://open.spotify.com/embed/track/5vQn0HXFJ6EHt3mWLTcUam?utm_source=generator" 
                                     width="100%" 
+                                    title="Fishbowl"
                                     height="380" 
                                     frameBorder="0" 
-                                    allowfullscreen="" 
+                                    allowFullScreen="" 
                                     allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
                                 />
                             </div>
