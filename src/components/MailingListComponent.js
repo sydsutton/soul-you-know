@@ -1,17 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import {
-    Portal,
-    Segment,
-    Button,
-    Header,
-    Input,
-    Icon
-} from "semantic-ui-react"
+import MailChimp from "./MailChimpComponent"
+import MailchimpSubscribe from 'react-mailchimp-subscribe';
 
 const MailingListComponent = () => {
 
     const [isPortalOpen, setIsPortalOpen] = useState(false)
-    const [email, setEmail] = useState("")
 
     useEffect(() => { 
         let isMounted = true
@@ -30,39 +23,23 @@ const MailingListComponent = () => {
         return () => isMounted = false
     }, [])
 
-    const handleSubmit = (e) => {
-        e.preventDefault()
-        setIsPortalOpen(false)
-    }
+    const postUrl = `https://gmail.us14.list-manage.com/subscribe/post?u=${process.env.REACT_APP_U_VALUE}&id=${process.env.REACT_APP_ID_VALUE}`
 
     return (
-        <Portal onClose={() => setIsPortalOpen(false)} open={isPortalOpen}>
-            <Segment className="portal-container" style={{position: "fixed", top: "0", right: "10%", zIndex: "1000", background: "#ddd"}}>
-                <Icon 
-                    onClick={() => setIsPortalOpen(false)} 
-                    name="close" 
-                    className="close-x" 
-                />
-                <Header style={{marginTop: "1rem"}}>Sign up for our mailing list!</Header>
-                <p className="portal-p">We'll keep you updated on shows</p>
-                <form onSubmit={handleSubmit}>
-                    <Input 
-                        type="email" 
-                        onChange={(e) => setEmail(e.target.value)}
-                        fluid
-                        focus
-                        icon="mail"
-                        iconPosition='left'
-                        size="small"
-                        style={{margin: "1rem"}}
+        <div>
+            <MailchimpSubscribe
+                url={postUrl}
+                render={({ subscribe, status, message}) => (
+                    <MailChimp 
+                        status={status} 
+                        message={message}
+                        onValidated={formData => subscribe(formData)}
+                        isPortalOpen={isPortalOpen} 
+                        setIsPortalOpen={setIsPortalOpen}
                     />
-                    <div className="portal-buttons">
-                        <Button color="blue" type="submit">Sign up</Button>
-                        <Button color="black" onClick={() => setIsPortalOpen(false)}>Close</Button>
-                    </div>
-                </form>
-            </Segment>
-        </Portal>
+                )}
+             />
+        </div>
     );
 };
 
