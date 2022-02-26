@@ -12,20 +12,30 @@ const MailChimpComponent = ({isPortalOpen, setIsPortalOpen, status, message, onV
 
     const [email, setEmail] = useState("")
 
+    const closePortal = () => {
+        setTimeout(() => {
+            setIsPortalOpen(false)
+        }, 3000)
+    }
+
     const handleSubmit = (e) => {
         e.preventDefault();
         if(email){
             onValidated({
                 MERGE0: email
             })
-            setTimeout(() => {
-                setIsPortalOpen(false)
-            }, 5000)
         }
     }
 
+    if(status === "success"){
+        closePortal()
+    }
+
     return (
-        <Portal onClose={() => setIsPortalOpen(false)} open={isPortalOpen}>
+        <Portal 
+            // onClose={() => setIsPortalOpen(false)} 
+            open={isPortalOpen}
+        >
             <Segment className="portal-container" style={{height: "15rem", display: "flex", flexDirection: "column", justifyContent:"space-evenly", position: "fixed", top: "0", right: "10%", zIndex: "1000", background: "#eee"}}>
                 <Icon 
                     onClick={() => setIsPortalOpen(false)} 
@@ -68,10 +78,11 @@ const MailChimpComponent = ({isPortalOpen, setIsPortalOpen, status, message, onV
                             color="blue" 
                             type="submit"
                             disabled={!email}
+                            size="small"
                         >
                             Sign up
                         </Button>
-                        <Button color="black" onClick={() => setIsPortalOpen(false)}>Close</Button>
+                        <Button size="small" color="black" onClick={() => setIsPortalOpen(false)}>Close</Button>
                     </div>
                 </form>
             </Segment>
