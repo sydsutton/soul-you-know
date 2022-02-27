@@ -117,7 +117,6 @@ const MailChimpComponent = ({status, message, onValidated}) => {
                             basic
                             onClick={() => setIsModalOpen(false)}
                             icon="close"
-                            type="outline"
                         />
                     </div>
                 </form>

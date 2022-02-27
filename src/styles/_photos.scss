@@ -1,0 +1,27 @@
+.photo-page-container {
+    h1 {
+        color: $highlight-color;
+        text-align: center;
+    }
+}
+
+.photos-container {
+    @include flexCenter(row);
+    flex-wrap: wrap;
+    margin-top: 4rem;
+
+}
+
+.button-group-container {
+    text-align: center;
+}
+
+.photo-image {
+    margin: .5rem;
+    max-width: 20rem;
+}
+
+.modal-image {
+    max-height: 80vh;
+    margin: 0 auto;
+}

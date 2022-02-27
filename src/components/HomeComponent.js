@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import Members from "./MembersComponent"
-import MailingList from "./MailingListComponent"
 import { Parallax } from "react-scroll-parallax"
 import {showsList} from "../data/showsList"
 
@@ -18,11 +17,7 @@ const HomeComponent = () => {
     }, [])
     
     return (
-        <div >
-
-            <div className="mailing-container">
-                <MailingList />
-            </div>
+        <div>
 
             <Parallax speed={-30} className="hero-container" translateY={[-50, 40]}>
                 <div className="hero-image"/>

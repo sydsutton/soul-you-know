@@ -1,3 +1,10 @@
+.videos-page-container {
+    h1 {
+        color: $highlight-color;
+        text-align: center;
+    }
+}
+
 .videos-container {
     @include flexCenter(row);
     flex-wrap: wrap;
