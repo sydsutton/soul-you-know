@@ -25,7 +25,11 @@ const MembersComponent = () => {
             {members.map((member, index) => {
                 return (
                     <div key={index} className="band-member">
-                        <Card index={index} onClick={handleClick}>
+                        <Card 
+                            index={index} 
+                            onClick={handleClick}
+                            raised
+                        >
                             <div className="member-image-container">
                                 <Image src={member.img} className="member-image" />
                             </div>

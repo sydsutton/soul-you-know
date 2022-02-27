@@ -32,7 +32,7 @@
 .nav-link {
     color: $light-color;
     padding: 1rem 1.5rem;
-
+    margin: 0;
     &:hover {
         background: #3e3d3f;
         color: $light-color;
@@ -42,6 +42,7 @@
 .active {
     color: $light-color;
     background: #3e3d3f;
+    box-shadow: 5px 5px 5px rgba(0,0,0,.1);
 }
 
 .sidebar-link {
@@ -54,5 +55,44 @@
 
     &:hover {
         color: $dark-color;
+    }
+}
+
+.nav-dropdown {
+    list-style: none;
+    @include flexCenter(column);
+    text-align: center;
+    position: fixed;
+    top: 3.8rem;
+    background-image: linear-gradient(90deg, rgb(34, 34, 34), rgb(37, 37, 37));
+    padding: 0;
+
+    .active {
+        background: unset;
+        border-bottom: 3px solid $light-color;
+        padding-bottom: .5rem;
+        box-shadow: unset;
+    }
+}
+
+.hidden {
+    display: none;
+}
+
+.visible {
+    display: block;
+}
+
+.nav-social {
+    list-style: none;
+    @include flexCenter(row);
+    padding-left: 0;
+
+    li a{
+        color: $light-color;
+        margin-right: .5rem;
+        &:hover {
+            color: $highlight-color;
+        }
     }
 }

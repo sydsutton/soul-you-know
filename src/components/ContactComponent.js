@@ -1,4 +1,5 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, useContext} from 'react';
+import { Context } from "../Context"
 import Form from "./ContactForm"
 import emailjs from "emailjs-com"
 import Swal from "sweetalert2"
@@ -6,7 +7,8 @@ import {
     Container,
     Divider,
     Icon,
-    Grid
+    Grid,
+    Button
 } from "semantic-ui-react"
 import { Parallax } from 'react-scroll-parallax';
 
@@ -20,6 +22,8 @@ const ContactComponent = () => {
     }
     const [values, setValues] = useState(initialFormValues)
     const [loading, setLoading] = useState(false)
+
+    const {setIsModalOpen} = useContext(Context)
 
     useEffect(() => {
         window.scroll(0,0)
@@ -90,7 +94,14 @@ const ContactComponent = () => {
                                     <Icon name="facebook" size={iconSize} />
                                     <p>https://www.facebook.com/soulyouknowband</p>
                                 </li> 
+                                <li className="contact-item-container">
+                                    <Icon size={iconSize} name="paper plane" />
+                                    <p>Sign up for our mailing list to stay up-to-date!</p>
+                                </li>
                             </ul>
+                            <div style={{textAlign: "center"}}>
+                                <Button color="teal" className="cta-button" onClick={() => setIsModalOpen(true)}>Subscribe here</Button>
+                            </div>
                         </Grid.Column>
 
                         <Grid.Column mobile={16} tablet={8} computer={8}>

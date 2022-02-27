@@ -32,7 +32,7 @@ const HomeComponent = () => {
                 <Container>
                     <Grid>
                         <Grid.Column mobile={16} tablet={16} computer={8} className="featured-container">
-                            <h2>Featured Song</h2>
+                            <h2>Featured</h2>
                             <Divider style={{margin: "-.5rem 0 2rem"}}/>
                             <div className="ui stackable two column grid iframe-container">
                                 <iframe 

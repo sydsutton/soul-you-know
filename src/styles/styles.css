@@ -306,6 +306,7 @@
 .nav-link {
   color: #e7e7e7;
   padding: 1rem 1.5rem;
+  margin: 0;
 }
 
 .nav-link:hover {
@@ -316,6 +317,8 @@
 .active {
   color: #e7e7e7;
   background: #3e3d3f;
+  -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+          box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
 }
 
 .sidebar-link {
@@ -341,6 +344,83 @@
 
 .sidebar-link:hover {
   color: #1f1f1f;
+}
+
+.nav-dropdown {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  position: fixed;
+  top: 3.8rem;
+  background-image: -webkit-gradient(linear, left top, right top, from(#222222), to(#252525));
+  background-image: linear-gradient(90deg, #222222, #252525);
+  padding: 0;
+}
+
+.nav-dropdown .active {
+  background: unset;
+  border-bottom: 3px solid #e7e7e7;
+  padding-bottom: .5rem;
+  -webkit-box-shadow: unset;
+          box-shadow: unset;
+}
+
+.hidden {
+  display: none;
+}
+
+.visible {
+  display: block;
+}
+
+.nav-social {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding-left: 0;
+}
+
+.nav-social li a {
+  color: #e7e7e7;
+  margin-right: .5rem;
+}
+
+.nav-social li a:hover {
+  color: #26c1e0;
+}
+
+@media (min-width: 600px) and (max-width: 800px) {
+  .navbar-links {
+    width: 100%;
+  }
+  .nav-link {
+    font-size: .7em;
+    margin: 0;
+    padding: 1rem;
+  }
 }
 
 @media (min-width: 200px) and (max-width: 600px) {
@@ -481,6 +561,8 @@
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  padding-left: 0;
+  margin-bottom: 0;
 }
 
 .contact-item-container {

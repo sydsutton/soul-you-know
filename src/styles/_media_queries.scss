@@ -1,8 +1,18 @@
+@media (min-width: 600px) and (max-width: 800px) {
+
+    .navbar-links {
+        width: 100%;
+    }
+    .nav-link {
+        font-size: .7em;
+        margin: 0;
+        padding: 1rem;
+    }
+}
+
 @media (min-width: 200px) and (max-width: 600px) {
 
     .navbar {
-        // @include flexCenter(row);
-        // justify-content: space-evenly;
 
         .navbar-links {
             display: none;

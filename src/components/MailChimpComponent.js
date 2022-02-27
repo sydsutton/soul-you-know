@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import {
     Portal,
     Segment,
@@ -9,14 +9,17 @@ import {
     Divider,
     Loader
 } from "semantic-ui-react"
+import {Context} from "../Context"
 
-const MailChimpComponent = ({isPortalOpen, setIsPortalOpen, status, message, onValidated}) => {
+const MailChimpComponent = ({status, message, onValidated}) => {
+
+    const {isModalOpen, setIsModalOpen} = useContext(Context)
 
     const [email, setEmail] = useState("")
 
     const closePortal = () => {
         setTimeout(() => {
-            setIsPortalOpen(false)
+            setIsModalOpen(false)
         }, 3000)
     }
 
@@ -47,11 +50,11 @@ const MailChimpComponent = ({isPortalOpen, setIsPortalOpen, status, message, onV
 
     return (
         <Portal 
-            open={isPortalOpen}
+            open={isModalOpen}
         >
             <Segment className="portal-container" style={segmentStyles}>
                 <Icon 
-                    onClick={() => setIsPortalOpen(false)} 
+                    onClick={() => setIsModalOpen(false)} 
                     name="close" 
                     className="close-x" 
                 />
@@ -70,7 +73,7 @@ const MailChimpComponent = ({isPortalOpen, setIsPortalOpen, status, message, onV
                         dangerouslySetInnerHTML={{ __html: message }}
                     />
                 :   <div>
-                        <Header style={{marginTop: "1rem", marginBottom: "0"}}>Stay in the Know!</Header>
+                        <h3 style={{marginTop: "1rem", marginBottom: "0"}}>Stay in the Know!</h3>
                         <Divider />
                         <p className="portal-p">Subscribe and we'll keep you updated on shows</p>
                     </div>
@@ -99,11 +102,11 @@ const MailChimpComponent = ({isPortalOpen, setIsPortalOpen, status, message, onV
                             </Button>
                         :
                                 <Button 
-                                color="purple" 
+                                color="teal" 
                                 type="submit"
                                 disabled={!email}
                                 size="small"
-                                content="Sign up"
+                                content="Subscribe"
                                 icon="signup"
                             />
                         }
@@ -112,7 +115,7 @@ const MailChimpComponent = ({isPortalOpen, setIsPortalOpen, status, message, onV
                             color="black" 
                             content="No thanks"
                             basic
-                            onClick={() => setIsPortalOpen(false)}
+                            onClick={() => setIsModalOpen(false)}
                             icon="close"
                             type="outline"
                         />

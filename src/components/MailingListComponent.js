@@ -1,10 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
+import { Context } from "../Context"
 import MailChimp from "./MailChimpComponent"
 import MailchimpSubscribe from 'react-mailchimp-subscribe';
 
 const MailingListComponent = () => {
 
-    const [isPortalOpen, setIsPortalOpen] = useState(false)
+    const {isModalOpen, setIsModalOpen} = useContext(Context)
 
     useEffect(() => { 
         let isMounted = true
@@ -13,7 +14,7 @@ const MailingListComponent = () => {
 
         if(sessionStorage.getItem("already shown") !== "true"){
             setTimeout(() => {
-                setIsPortalOpen(true)
+                setIsModalOpen(true)
                 sessionStorage.setItem("already shown", true)
             }, 5000)
         } else {
@@ -34,8 +35,6 @@ const MailingListComponent = () => {
                         status={status} 
                         message={message}
                         onValidated={formData => subscribe(formData)}
-                        isPortalOpen={isPortalOpen} 
-                        setIsPortalOpen={setIsPortalOpen}
                     />
                 )}
              />
