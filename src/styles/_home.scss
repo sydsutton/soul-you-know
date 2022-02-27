@@ -11,8 +11,9 @@
 }
 
 .middle-container {
-    height: 60vh;
     width: 100vw;
+    height: 80vh;
+    margin: -3rem 0;
 }
 
 .middle-image {
@@ -20,7 +21,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    height: 100vh;
+    height: 100%;
 }
 
 .parallax-text {

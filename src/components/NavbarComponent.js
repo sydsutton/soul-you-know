@@ -23,6 +23,14 @@ const NavbarComponent = () => {
         dropdown.classList.remove('visible')
     }
 
+    const handleClick = () => {
+        if(dropdown.classList.contains('hidden')){
+            handleEnter()
+        } else {
+            handleLeave()
+        }
+    }
+
 
     return (
         <Sticky className="ui fixed menu" style={{border: "none"}}>
@@ -47,7 +55,7 @@ const NavbarComponent = () => {
                     </li>
 
                     {/* dropdown start */}
-                    <li onMouseEnter={handleEnter} onMouseLeave={handleLeave}>
+                    <li onMouseEnter={handleEnter} onMouseLeave={handleLeave} onClick={handleClick}>
                         <h5 style={{margin: "0"}}>
                             <Link to="#" className="nav-link">Media<Icon name="caret down" /></Link>
                         </h5>

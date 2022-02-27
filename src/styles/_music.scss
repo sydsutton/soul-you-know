@@ -1,5 +1,13 @@
+.songs-page-container {
+
+    margin-top: 7rem; 
+
+    h1 {
+        color: $highlight-color;
+        text-align: center;
+    }
+}
+
 .songs-container {
     @include flexCenter(column);
-    margin: 0 auto;
-    padding-bottom: 10rem;
 }

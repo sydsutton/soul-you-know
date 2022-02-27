@@ -5,7 +5,7 @@ import MailchimpSubscribe from 'react-mailchimp-subscribe';
 
 const MailingListComponent = () => {
 
-    const {isModalOpen, setIsModalOpen} = useContext(Context)
+    const {setIsModalOpen} = useContext(Context)
 
     useEffect(() => { 
         let isMounted = true

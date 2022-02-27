@@ -21,7 +21,7 @@ const PhotosComponent = () => {
             <h1>Photos</h1>
             <Divider />
             <div className="button-group-container">
-                <Button.Group size="small" color="white">
+                <Button.Group size="small" color="grey">
                     <Button onClick={() => setFilter("")}>All</Button>
                     <Button onClick={() => setFilter("live")}>Shows</Button>
                     <Button onClick={() => setFilter("artwork")}>Artwork</Button>
@@ -29,14 +29,15 @@ const PhotosComponent = () => {
                 </Button.Group>
             </div>
             <div className="photos-container">
-                {photoData.map(photo => {
+                {photoData.map((photo, index) => {
                     return (
-                        <div key={photo.index} className="photo-image" onClick={() => setSelectedImage(photo.img)}>
-                            <Image src={photo.img} alt={`soul you know ${photo.type}`} />
+                        <div key={index} className="photo-image-container" onClick={() => setSelectedImage(photo.img)}>
+                            <Image src={photo.img} alt={`soul you know ${photo.type}`} className="photo-image" />
                         </div>
                     )
                 })}
             </div>
+            <p style={{color: "#aaa", fontSize:".7em"}}>A big thanks to Chad Baleskie for some of the photos!</p>
             <Modal closeIcon open={selectedImage ? true : false} onClose={() => setSelectedImage("")} style={{background: "transparent", margin: "2rem"}}>
                 <Modal.Content style={{background: "transparent"}} >
                     <Image src={selectedImage} className="modal-image" />

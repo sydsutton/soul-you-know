@@ -3,7 +3,8 @@ import {youtubeList} from "../data/youtubeList"
 
 import {
     Divider,
-    Container
+    Container,
+    Icon
 } from "semantic-ui-react"
 
 const VideosComponent = () => {

@@ -2,7 +2,9 @@ import React from 'react';
 import {
     Modal,
     Image,
-    Container
+    Container,
+    Grid,
+    Divider
 } from "semantic-ui-react"
 
 const BioComponent = ({activeMember, bioOpen, setBioOpen, setActiveIndex}) => {
@@ -14,17 +16,24 @@ const BioComponent = ({activeMember, bioOpen, setBioOpen, setActiveIndex}) => {
                     setBioOpen(false)
                     setActiveIndex(-1)
                 }} 
-                className="bio-container"
                 closeIcon
+                style={{maxWidth: "80vw"}}
             >
-                <div className="bio-image-container">
-                    <Image className="bio-image" src={activeMember.img} alt={activeMember.name} />
-                </div>
-                <Modal.Header>
-                    <h3>{activeMember.name}</h3>
-                </Modal.Header>
-                <Modal.Content>
-                    <p>{activeMember.bio}</p>
+                <Modal.Content className="bio-container">
+                    <Grid>
+                        <Grid.Column computer={6} tablet={6} mobile={16}>
+                                <Image className="bio-image" src={activeMember.img} alt={activeMember.name} />
+                        </Grid.Column>
+                        <Grid.Column computer={8} tablet={8} mobile={16}>
+                            <Modal.Header>
+                                <h3>{activeMember.name}</h3>
+                            </Modal.Header>
+                            <Divider />
+                            <Modal.Content>
+                                <p>{activeMember.bio}</p>
+                            </Modal.Content>
+                        </Grid.Column>
+                    </Grid>
                 </Modal.Content>
             </Modal>
         </Container>

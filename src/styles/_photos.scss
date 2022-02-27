@@ -16,9 +16,22 @@
     text-align: center;
 }
 
-.photo-image {
+.photo-image-container {
+    height: 15rem;
+    width: 20rem;
     margin: .5rem;
-    max-width: 20rem;
+
+    &:hover {
+        transform: scale(1.05);
+        box-shadow: 5px 5px 5px rgba(0,0,0,.3);
+        cursor: pointer;
+    }
+}
+
+.photo-image {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
 }
 
 .modal-image {

@@ -19,7 +19,7 @@ const HomeComponent = () => {
     return (
         <div>
 
-            <Parallax speed={-30} className="hero-container" translateY={[-50, 40]}>
+            <Parallax speed={-50} className="hero-container" translateY={[-50, 40]}>
                 <div className="hero-image"/>
             </Parallax>
 
@@ -72,7 +72,7 @@ const HomeComponent = () => {
                 </Container>
             </div>
 
-            <Parallax speed={-30} className="middle-container" translateY={[-50, 40]}>
+            <Parallax speed={-20} className="middle-container">
                 <div className="middle-image"/>
             </Parallax>
 

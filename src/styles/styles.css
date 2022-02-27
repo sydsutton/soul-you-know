@@ -13,8 +13,9 @@
 }
 
 .middle-container {
-  height: 60vh;
   width: 100vw;
+  height: 80vh;
+  margin: -3rem 0;
 }
 
 .middle-image {
@@ -22,7 +23,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  height: 100vh;
+  height: 100%;
 }
 
 .parallax-text {
@@ -440,11 +441,12 @@
     height: 50vh;
   }
   .middle-container {
-    height: 40vh;
+    height: 70vh;
+    margin: -4rem 0;
   }
   .hero-image,
   .middle-image {
-    height: 50vh;
+    height: 100%;
   }
 }
 
@@ -495,6 +497,15 @@
   height: 250px;
 }
 
+.songs-page-container {
+  margin-top: 7rem;
+}
+
+.songs-page-container h1 {
+  color: #26c1e0;
+  text-align: center;
+}
+
 .songs-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -509,8 +520,6 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin: 0 auto;
-  padding-bottom: 10rem;
 }
 
 .form {
@@ -640,20 +649,7 @@
 }
 
 .bio-container {
-  max-width: 20rem;
-  max-height: 100vh;
-}
-
-.bio-image-container {
-  height: 20rem;
-  width: 100%;
-}
-
-.bio-image {
-  width: 100%;
-  max-height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  color: #1f1f1f;
 }
 
 .photo-page-container h1 {
@@ -684,14 +680,44 @@
   text-align: center;
 }
 
-.photo-image {
+.photo-image-container {
+  height: 15rem;
+  width: 20rem;
   margin: .5rem;
-  max-width: 20rem;
+}
+
+.photo-image-container:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+          box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+
+.photo-image {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100%;
+  width: 100%;
 }
 
 .modal-image {
   max-height: 80vh;
   margin: 0 auto;
+}
+
+.merch-page-container {
+  margin-top: 7rem;
+}
+
+.merch-page-container h1 {
+  color: #26c1e0;
+  text-align: center;
+}
+
+.merch-page-container h3, .merch-page-container h5 {
+  color: #e7e7e7;
+  text-align: center;
 }
 
 body {

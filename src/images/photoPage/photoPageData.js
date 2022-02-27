@@ -15,14 +15,6 @@ import show7 from "./photos/show7.jpg"
 
 export const photoPageData = [
     {
-        img: frontCover2,
-        type: "artwork"
-    },
-    {
-        img: album,
-        type: "artwork"
-    },
-    {
         img: show1,
         type: "live"
     },
@@ -43,6 +35,10 @@ export const photoPageData = [
         type: "other"
     },
     {
+        img: frontCover2,
+        type: "artwork"
+    },
+    {
         img: shoot4,
         type: "other"
     },
@@ -53,6 +49,10 @@ export const photoPageData = [
     {
         img: show3,
         type: "live"
+    },
+    {
+        img: album,
+        type: "artwork"
     },
     {
         img: show4,
