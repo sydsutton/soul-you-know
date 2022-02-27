@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Glory:wght@300;400;500;700&display=swap");
 .hero-container {
   width: 100vw;
   height: 70vh;
@@ -63,6 +63,7 @@
 .show-title h4 {
   color: #999999;
   margin-bottom: 0;
+  letter-spacing: .2em;
 }
 
 .show-title h2 {
@@ -73,6 +74,39 @@
 .show-title h5 {
   margin-top: 0;
   color: #999999;
+}
+
+.show-title .address-container,
+.show-title .site-link-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  margin-top: .5rem;
+  color: #999999;
+  color: #26c1e0;
+  width: 65%;
+}
+
+.show-title .address-container:hover,
+.show-title .site-link-container:hover {
+  color: #5766ba;
+  text-decoration: underline;
 }
 
 .members-container {
@@ -552,7 +586,7 @@ body {
 }
 
 html {
-  font-family: 'Yusei Magic', sans-serif;
+  font-family: 'Glory', sans-serif;
 }
 
 h1, h2, h3, h4, h5 {

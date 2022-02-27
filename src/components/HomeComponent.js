@@ -7,7 +7,8 @@ import {showsList} from "../data/showsList"
 import {
     Divider,
     Container,
-    Grid
+    Grid,
+    Icon
 } from "semantic-ui-react"
 
 const HomeComponent = () => {
@@ -58,7 +59,14 @@ const HomeComponent = () => {
                                             <h4>{show.date}</h4>
                                             <h2>{show.venue}</h2>
                                             <h5>Cover- {show.cover}</h5>
-                                            <a href={show.link}>{show.link}</a>
+                                            <a href="#" onClick={() => window.open(show.link, '_blank')} className="site-link-container">
+                                                <Icon name="external square alternate" />
+                                                <p>{show.link}</p>
+                                            </a>
+                                            <a href="#" onClick={() => window.open(`https://www.google.com/maps/place/${show.address}`, '_blank')} className="address-container">
+                                                <Icon name="point" />
+                                                <p>{show.address}</p>
+                                            </a>
                                         </div>
                                         <Divider />
                                     </div>
