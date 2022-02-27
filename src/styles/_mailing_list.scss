@@ -23,3 +23,14 @@
 .portal-p {
     font-size: .8em;
 }
+
+.mailing-title-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+
+    img {
+        margin-top: 1rem;
+    }
+}

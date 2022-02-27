@@ -3,12 +3,12 @@ import {
     Portal,
     Segment,
     Button,
-    Header,
+    Image,
     Input,
     Icon,
     Divider,
-    Loader
 } from "semantic-ui-react"
+import logo from "../images/logo2.png"
 import {Context} from "../Context"
 
 const MailChimpComponent = ({status, message, onValidated}) => {
@@ -20,7 +20,7 @@ const MailChimpComponent = ({status, message, onValidated}) => {
     const closePortal = () => {
         setTimeout(() => {
             setIsModalOpen(false)
-        }, 3000)
+        }, 4000)
     }
 
     const handleSubmit = (e) => {
@@ -44,13 +44,13 @@ const MailChimpComponent = ({status, message, onValidated}) => {
         top: "0", 
         right: "10%", 
         zIndex: "1000", 
-        background: "rgb(241,241,241)", 
-        boxShadow: "5px 5px 5px rgba(0,0,0,.4)"
+        boxShadow: "5px 5px 5px rgba(0,0,0,.4)",
     }
 
     return (
         <Portal 
             open={isModalOpen}
+            className="portal-outer"
         >
             <Segment className="portal-container" style={segmentStyles}>
                 <Icon 
@@ -58,32 +58,34 @@ const MailChimpComponent = ({status, message, onValidated}) => {
                     name="close" 
                     className="close-x" 
                 />
-                {status === "sending" ? 
-                    <h4>Sending. . .</h4>
-                :
-                status === "error" ? 
-                    <div
-                        style={{color: "red"}}
-                        dangerouslySetInnerHTML={{ __html: message }}
-                    />
-                :
-                status === "success" ? 
-                    <div
-                        style={{color: "green"}}
-                        dangerouslySetInnerHTML={{ __html: message }}
-                    />
-                :   <div>
-                        <h3 style={{marginTop: "1rem", marginBottom: "0"}}>Stay in the Know!</h3>
-                        <Divider />
+
+                <div className="mailing-title-container">
+                    <img src={logo} height="50px" width="50px" /><h3 style={{marginTop: "1rem", marginBottom: "0"}}>Stay in the Know!</h3>
+                </div>
+                    <Divider />
+                    {status === "sending" ? 
+                        <p>Sending. . .</p>
+                    :
+                    status === "error" ? 
+                        <div
+                            style={{color: "red"}}
+                            dangerouslySetInnerHTML={{ __html: message }}
+                        />
+                    :
+                    status === "success" ? 
+                        <div
+                            style={{color: "green"}}
+                            dangerouslySetInnerHTML={{ __html: message }}
+                        />
+                    :   
                         <p className="portal-p">Subscribe and we'll keep you updated on shows</p>
-                    </div>
-                }
+
+                    }
                 <form onSubmit={handleSubmit}>
                     <Input 
                         type="email" 
                         onChange={(e) => setEmail(e.target.value)}
                         fluid
-                        focus
                         placeholder="Email"
                         icon="mail"
                         value={email}
@@ -94,7 +96,7 @@ const MailChimpComponent = ({status, message, onValidated}) => {
                     <div className="portal-buttons">
                         {status === "sending" ? 
                             <Button 
-                                color="purple" 
+                                color="teal" 
                                 size="small"
                                 loading
                             >

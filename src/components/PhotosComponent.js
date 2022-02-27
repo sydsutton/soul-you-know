@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { photoPageData } from "../images/photoPage/photoPageData"
 
 import {
@@ -13,6 +13,10 @@ const PhotosComponent = () => {
 
     const [filter, setFilter] = useState("")
     const [selectedImage, setSelectedImage] = useState("")
+
+    useEffect(() => {
+        window.scroll(0,0)
+    }, [])
     
     const photoData = filter ? photoPageData.filter(photo => photo.type === filter) :photoPageData 
 
