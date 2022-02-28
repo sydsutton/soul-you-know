@@ -41,7 +41,6 @@ const PhotosComponent = () => {
                     )
                 })}
             </div>
-            <p style={{color: "#aaa", fontSize:".7em"}}>A big thanks to Chad Baleskie for some of the photos!</p>
             <Modal closeIcon open={selectedImage ? true : false} onClose={() => setSelectedImage("")} style={{background: "transparent", margin: "2rem"}}>
                 <Modal.Content style={{background: "transparent"}} >
                     <Image src={selectedImage} className="modal-image" />
