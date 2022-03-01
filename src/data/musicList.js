@@ -1,17 +1,33 @@
+import fishbowl from "../data/songs/Fishbowl.mp3"
+import happy from "../data/songs/Happy.mp3"
+import heroes from "../data/songs/Heroes.mp3"
+import western from "../data/songs/Slow-mo Killer.mp3"
+import truth from "../data/songs/Us vs. The Problem.mp3"
+import watch from "../data/songs/Watch Your Back.mp3"
+
 export const musicList = [
     {
-        src: "https://open.spotify.com/embed/track/5vQn0HXFJ6EHt3mWLTcUam?utm_source=generator"
+        src: fishbowl,
+        name: "Fishbowl"
     },
     {
-        src: "https://open.spotify.com/embed/track/26KRjGVBcljiq10s7T6Z5O?utm_source=generator"
+        src: happy,
+        name: "Happy"
     },
     {
-        src: "https://open.spotify.com/embed/track/1VVvJx1XPQjixkBNJJiCiP?utm_source=generator"
+        src: heroes,
+        name: "Heroes"
     },
     {
-        src: "https://open.spotify.com/embed/track/4KVxaBK0jgqOw1tPmREeNO?utm_source=generator"
+        src: western,
+        name: "Syd's Western"
     },
     {
-        src: "https://open.spotify.com/embed/track/6lb6bDZuKvkc1Fx2rB8FFl?utm_source=generator"
+        src: truth,
+        name: "Truth"
+    },
+    {
+        src: watch,
+        name: "Watch Your Back"
     },
 ]

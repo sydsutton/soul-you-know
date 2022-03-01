@@ -2,12 +2,17 @@ import React, { useEffect } from 'react';
 import Members from "./MembersComponent"
 import { Parallax } from "react-scroll-parallax"
 import {showsList} from "../data/showsList"
+import ReactAudioPlayer from "react-audio-player"
+import Fishbowl from "../data/songs/Fishbowl.mp3"
+import cover from "../images/photoPage/photos/Album.jpg"
 
 import {
     Divider,
     Container,
     Grid,
-    Icon
+    Icon,
+    Card,
+    Image
 } from "semantic-ui-react"
 
 const HomeComponent = () => {
@@ -15,7 +20,7 @@ const HomeComponent = () => {
     useEffect(() => {
         window.scroll(0,0)
     }, [])
-    
+
     return (
         <div>
 
@@ -26,23 +31,6 @@ const HomeComponent = () => {
             <div className="main-container">
                 <Container>
                     <Grid>
-                        <Grid.Column mobile={16} tablet={16} computer={8} className="featured-container">
-                            <h2>Featured</h2>
-                            <Divider style={{margin: "-.5rem 0 2rem"}}/>
-                            <div className="ui stackable two column grid iframe-container">
-
-                                <iframe 
-                                    allow="autoplay *; encrypted-media *; fullscreen *" 
-                                    frameborder="0" 
-                                    height="150" 
-                                    style={{width:"100%", maxWidth: "660px", overflow: "hidden", background: "transparent"}}
-                                    sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" 
-                                    src="https://embed.music.apple.com/us/album/fishbowl/1567786639?i=1567786640">
-                                    
-                                    </iframe>
-                            </div>
-                        </Grid.Column>
-
                         <Grid.Column mobile={16} tablet={16} computer={8} className="shows-container">
                             <h2>Upcoming Shows</h2>
                             <Divider style={{margin: "-.5rem 0 2rem"}}/>
@@ -67,6 +55,29 @@ const HomeComponent = () => {
                                     </div>
                                 )
                             })}
+                        </Grid.Column>
+
+                        <Grid.Column mobile={16} tablet={16} computer={8} className="featured-container">
+                            <h2>Featured</h2>
+                            <Divider style={{margin: "-.5rem 0 2rem"}}/>
+                            <div className="ui stackable two column grid iframe-container">
+                                <Card style={{width: "65%"}}>
+                                    <Image src={cover} style={{borderRadius: "20px"}} />
+                                    <Card.Content className="featured-content" style={{backgroundColor: "rgba(255, 255, 255, .35)", backdropFilter: "blur(5px)", width: "100%"}}>
+                                        <div className="featured-audio-header">
+                                            <h3>Fishbowl</h3>
+                                            <a href="#" onClick={() => window.open('https://open.spotify.com/artist/2hxK5s6Gvisb2GOx6Pl1cx', "_blank")}><Icon name="spotify" size="big" /></a>
+                                            <a href="#" onClick={() => window.open('https://music.apple.com/us/artist/soul-you-know/1567783709', "_blank")}><Icon name="apple" size="big" /></a>
+                                        </div>
+                                        <ReactAudioPlayer 
+                                            src={Fishbowl}
+                                            controls
+                                            className="featured-audio"
+                                            volume={.3}
+                                        />
+                                    </Card.Content>
+                                </Card>
+                            </div>  
                         </Grid.Column>
                     </Grid>
                 </Container>
