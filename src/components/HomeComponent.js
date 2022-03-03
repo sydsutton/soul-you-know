@@ -42,6 +42,14 @@ const HomeComponent = () => {
                                             <h4>{show.date}</h4>
                                             <h2>{show.venue}</h2>
                                             <h5>Cover- {show.cover}</h5>
+                                            {show.eventLink ? 
+                                                <a href="#" onClick={() => window.open(show.eventLink, '_blank')} className="site-link-container">
+                                                    <Icon name="linkify" />
+                                                    <p>{show.eventLink}</p>
+                                                </a>
+                                            :
+                                            null
+                                            }
                                             <a href="#" onClick={() => window.open(show.link, '_blank')} className="site-link-container">
                                                 <Icon name="external square alternate" />
                                                 <p>{show.link}</p>
