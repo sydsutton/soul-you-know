@@ -51,6 +51,8 @@
 
 .show-title{
     text-align: start;
+    display: flex;
+    flex-direction: column;
 
     h4 {
         color: rgb(153, 153, 153);
@@ -70,12 +72,11 @@
     .address-container,
     .site-link-container {
         @include flexCenter(row);
-        justify-content: start;
         align-items: start;
+        align-self: start;
         margin-top: .5rem;
         color: rgb(153, 153, 153);
         color: $highlight-color;
-        width: 65%;
 
         &:hover {
             color: $primary-color;

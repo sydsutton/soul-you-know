@@ -37,23 +37,35 @@ const HomeComponent = () => {
 
                             {showsList.map((show, index) => {
                                 return (
-                                    <div className="show-container" key={index}>
+                                    <div key={index}>
                                         <div className="show-title">
                                             <h4>{show.date}</h4>
                                             <h2>{show.venue}</h2>
-                                            <h5>Cover- {show.cover}</h5>
-                                            {show.eventLink ? 
-                                                <a href="#" onClick={() => window.open(show.eventLink, '_blank')} className="site-link-container">
-                                                    <Icon name="linkify" />
-                                                    <p>{show.eventLink}</p>
+                                            <h5>Cost- {show.cover}</h5>
+                                            {show.ticketLink ? 
+                                                <a href="#" onClick={() => window.open(show.ticketLink, '_blank')} className="site-link-container">
+                                                    <Icon name="ticket" />
+                                                    <p>Link to tickets</p>
                                                 </a>
                                             :
                                             null
                                             }
-                                            <a href="#" onClick={() => window.open(show.link, '_blank')} className="site-link-container">
-                                                <Icon name="external square alternate" />
-                                                <p>{show.link}</p>
-                                            </a>
+                                            {show.eventLink ? 
+                                                <a href="#" onClick={() => window.open(show.eventLink, '_blank')} className="site-link-container">
+                                                    <Icon name="linkify" />
+                                                    <p>Event link</p>
+                                                </a>
+                                            :
+                                            null
+                                            }
+                                            {show.venueLink ? 
+                                                <a href="#" onClick={() => window.open(show.venueLink, '_blank')} className="site-link-container">
+                                                    <Icon name="external square alternate" />
+                                                    <p>{show.venue}'s Site</p>
+                                                </a>
+                                            :
+                                            null
+                                            }
                                             <a href="#" onClick={() => window.open(`https://www.google.com/maps/place/${show.address}`, '_blank')} className="address-container">
                                                 <Icon name="point" />
                                                 <p>{show.address}</p>
