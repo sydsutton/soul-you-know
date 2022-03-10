@@ -22,7 +22,7 @@ const MailChimpComponent = ({status, message, onValidated}) => {
             setIsModalOpen(false)
         }, 4000)
     }
-
+    console.log(status, message)
     const handleSubmit = (e) => {
         e.preventDefault();
         if(email){

@@ -99,7 +99,7 @@ const ContactComponent = () => {
                                     <p>Sign up for our mailing list to stay up-to-date!</p>
                                 </li>
                             </ul>
-                            <div style={{textAlign: "center"}}>
+                            <div style={{textAlign: "center", margin: "2rem 0"}}>
                                 <Button color="teal" className="cta-button" onClick={() => setIsModalOpen(true)}>Subscribe here</Button>
                             </div>
                         </Grid.Column>
