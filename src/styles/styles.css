@@ -244,10 +244,14 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.footer-container p {
+  margin: .5em 0 0;
 }
 
 .footer-list {
@@ -545,7 +549,7 @@
 
 .songs-page-container {
   margin-top: 7rem;
-  padding-bottom: 6rem;
+  padding-bottom: 8rem;
 }
 
 .songs-page-container h1 {
@@ -761,6 +765,57 @@
 
 .bio-container {
   color: #1f1f1f;
+  margin-bottom: 2rem;
+}
+
+.bio-list-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.bio-list {
+  padding: 0 2em 0 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+}
+
+.bio-list li::before {
+  content: '';
+  display: inline-block;
+  background-image: url("../images/logo2.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 15px;
+  width: 15px;
 }
 
 .photo-page-container h1 {

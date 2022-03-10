@@ -5,7 +5,11 @@
     width: 100%;
     background: $light-color;
     margin-top: 5rem;
-    @include flexCenter(row);
+    @include flexCenter(column);
+
+    p {
+        margin: .5em 0 0;
+    }
 }
 
 .footer-list {

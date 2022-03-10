@@ -41,7 +41,7 @@ const HomeComponent = () => {
                                         <div className="show-title">
                                             <h4>{show.date}</h4>
                                             <h2>{show.venue}</h2>
-                                            <h5>Cost- {show.cover}</h5>
+                                            <h5>Price- {show.cover}</h5>
                                             {show.ticketLink ? 
                                                 <a href="#" onClick={() => window.open(show.ticketLink, '_blank')} className="site-link-container">
                                                     <Icon name="ticket" />

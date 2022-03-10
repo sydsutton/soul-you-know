@@ -1,4 +1,27 @@
 .bio-container {
     color: $dark-color;
+    margin-bottom: 2rem;
 }
 
+.bio-list-container {
+    @include flexCenter(row);
+    justify-content: space-evenly;
+}
+
+.bio-list {
+    padding: 0 2em 0 0 ;
+    list-style: none;
+    @include flexCenter(column);
+    align-items: start;
+    li{
+        &::before {
+            content: '';
+            display: inline-block;
+            background-image: url("../images/logo2.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 15px;
+            width: 15px;
+        }
+    }
+}
