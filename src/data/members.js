@@ -57,7 +57,7 @@ export const members = [
         },
     },
     {
-        name: "Syd ( Andrew )",
+        name: "Syd / Andrew",
         instrument: "Guitar",
         img: syd,
         bio: {

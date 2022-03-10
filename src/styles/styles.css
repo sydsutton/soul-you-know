@@ -189,7 +189,6 @@
 
 .featured-content {
   position: absolute;
-  bottom: 50%;
 }
 
 .featured-audio-header {
@@ -498,6 +497,14 @@
   .middle-image {
     height: 100%;
   }
+  .scroll-box {
+    max-height: 22vh;
+    overflow-y: scroll;
+    background: #f3f3f3;
+    padding: .5em;
+    margin: .5em;
+    border-radius: 10px 0 0 10px;
+  }
 }
 
 .videos-page-container h1 {
@@ -765,31 +772,11 @@
 
 .bio-container {
   color: #1f1f1f;
-  margin-bottom: 2rem;
-}
-
-.bio-list-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
 }
 
 .bio-list {
-  padding: 0 2em 0 0;
   list-style: none;
+  margin: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -806,6 +793,7 @@
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: start;
+  padding-left: 0;
 }
 
 .bio-list li::before {

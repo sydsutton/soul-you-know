@@ -18,7 +18,7 @@ const BioComponent = ({activeMember, bioOpen, setBioOpen, setActiveIndex}) => {
                     setActiveIndex(-1)
                 }} 
                 closeIcon
-                style={{maxWidth: "80vw", marginBottom: "4rem"}}
+                style={{maxWidth: "80vw"}}
             >
                 <Modal.Content className="bio-container">
                     <Grid>
@@ -31,27 +31,31 @@ const BioComponent = ({activeMember, bioOpen, setBioOpen, setActiveIndex}) => {
                             </Modal.Header>
                             <Divider />
                             <Modal.Content>
-                                <p>{activeMember.bio.bio}</p>
-                                <div className="bio-list-container">
-                                    <ul className="bio-list">
-                                        <strong>Turn-ons:</strong>
-                                        {activeMember.bio.turnOns ? activeMember.bio.turnOns.map(turnOn => {
-                                            return (
-                                                <li>&nbsp; {turnOn}</li>
-                                            )
-                                        })
-                                        : null}
-                                    </ul>
-                                    <ul className="bio-list">
-                                        <strong>Turn-offs:</strong>
-                                        {activeMember.bio.turnOffs ? activeMember.bio.turnOffs.map(turnOff => {
-                                            return (
-                                                <li>&nbsp; {turnOff}</li>
-                                            )
-                                        })
-                                        : null}
-                                    </ul>
-                                </div>
+                                <Grid style={{marginTop: "1rem"}}>
+                                    <div className="scroll-box">
+                                        <p>{activeMember.bio.bio}</p>
+                                    </div>
+                                    <Grid.Column computer={8} tablet={8} mobile={16}>
+                                        <ul className="bio-list">
+                                            <strong>Turn-ons:</strong>
+                                            {activeMember.bio.turnOns.map((turnOn, index) => {
+                                                return (
+                                                    <li key={index}>&nbsp; {turnOn}</li>
+                                                )
+                                            })}
+                                        </ul>
+                                    </Grid.Column>
+                                    <Grid.Column computer={8} tablet={8} mobile={16}>
+                                        <ul className="bio-list">
+                                            <strong>Turn-offs:</strong>
+                                            {activeMember.bio.turnOffs.map((turnOff, index) => {
+                                                return (
+                                                    <li key={index}>&nbsp; {turnOff}</li>
+                                                )
+                                            })}
+                                        </ul>
+                                    </Grid.Column>
+                                </Grid>
                             </Modal.Content>
                         </Grid.Column>
                     </Grid>

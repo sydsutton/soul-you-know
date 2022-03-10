@@ -45,4 +45,13 @@
         height: 100%;
     }
 
+    .scroll-box {
+        max-height: 22vh;
+        overflow-y: scroll;
+        background: rgb(243, 243, 243);
+        padding: .5em;
+        margin: .5em;
+        border-radius: 10px 0 0 10px;
+    }
 }
+

@@ -1,18 +1,13 @@
 .bio-container {
     color: $dark-color;
-    margin-bottom: 2rem;
-}
-
-.bio-list-container {
-    @include flexCenter(row);
-    justify-content: space-evenly;
 }
 
 .bio-list {
-    padding: 0 2em 0 0 ;
     list-style: none;
+    margin: 0;
     @include flexCenter(column);
     align-items: start;
+    padding-left: 0;
     li{
         &::before {
             content: '';
