@@ -486,16 +486,21 @@
   .navbar .empty-div {
     width: 2.5rem;
   }
+  .hero-image {
+    height: 70%;
+    margin-top: 1rem;
+    background-position: top;
+  }
   .hero-container {
     height: 50vh;
+    margin-bottom: -7rem;
   }
   .middle-container {
     height: 70vh;
     margin: -4rem 0;
   }
-  .hero-image,
   .middle-image {
-    height: 100%;
+    background-position: center;
   }
   .scroll-box {
     max-height: 22vh;

@@ -31,8 +31,15 @@
         }
     }
 
+    .hero-image {
+        height: 70%;
+        margin-top: 1rem;
+        background-position: top;
+    }
+
     .hero-container {
         height: 50vh;
+        margin-bottom: -7rem;
     }
 
     .middle-container {
@@ -40,9 +47,8 @@
         margin: -4rem 0;
     }
 
-    .hero-image,
     .middle-image {
-        height: 100%;
+        background-position: center;
     }
 
     .scroll-box {
