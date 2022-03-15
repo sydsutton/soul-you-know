@@ -5,6 +5,7 @@ import {showsList} from "../data/showsList"
 import ReactAudioPlayer from "react-audio-player"
 import Fishbowl from "../data/songs/Fishbowl.mp3"
 import cover from "../images/photoPage/photos/Album.jpg"
+import poster from "../images/OneGiantLeap.jpg"
 
 import {
     Divider,
@@ -81,7 +82,7 @@ const HomeComponent = () => {
                             <h2>Featured</h2>
                             <Divider style={{margin: "-.5rem 0 2rem"}}/>
                             <div className="ui stackable two column grid iframe-container">
-                                <Card style={{width: "65%"}}>
+                                {/* <Card style={{width: "65%"}}>
                                     <Image src={cover} style={{borderRadius: "20px"}} />
                                     <Card.Content className="featured-content" style={{backgroundColor: "rgba(255, 255, 255, .35)", backdropFilter: "blur(5px)", width: "100%"}}>
                                         <div className="featured-audio-header">
@@ -96,7 +97,8 @@ const HomeComponent = () => {
                                             volume={.3}
                                         />
                                     </Card.Content>
-                                </Card>
+                                </Card> */}
+                                <Image className="featured-poster" src={poster} alt="Show poster" />
                             </div>  
                         </Grid.Column>
                     </Grid>

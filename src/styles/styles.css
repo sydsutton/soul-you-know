@@ -227,6 +227,17 @@
   margin-top: 1rem;
 }
 
+.featured-poster {
+  max-height: 75vh;
+  max-width: 80vw;
+}
+
+.featured-poster {
+  max-height: 75vh;
+  max-width: 90vw;
+  margin-top: 1rem;
+}
+
 .footer-container {
   position: absolute;
   bottom: 0;
