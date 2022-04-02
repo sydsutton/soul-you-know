@@ -26,4 +26,14 @@ export const showsList = [
         venueLink: "https://www.gallerycabaret.com/",
         address: "2020 N Oakley Ave, Chicago, IL 60647"
     },
+    {
+        date: "4/24/22",
+        venue: "The WC Social Club",
+        time: "Doors @ 5:30PM, Starts @ 6PM",
+        cover: "$12",
+        // ticketLink : "https://link.dice.fm/g3f8d2e0400c",
+        venueLink: "https://www.thewcsocialclub.com/",
+        // eventLink: "https://www.facebook.com/events/330479492353926",
+        address: "920 Roosevelt Rd, West Chicago, IL 60185"
+    },
 ]

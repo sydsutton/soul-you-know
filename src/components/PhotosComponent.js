@@ -26,10 +26,10 @@ const PhotosComponent = () => {
             <Divider />
             <div className="button-group-container">
                 <Button.Group size="small" color="grey">
-                    <Button onClick={() => setFilter("")}>All</Button>
-                    <Button onClick={() => setFilter("live")}>Shows</Button>
-                    <Button onClick={() => setFilter("artwork")}>Artwork</Button>
-                    <Button onClick={() => setFilter("other")}>Other</Button>
+                    <Button onClick={() => setFilter("")} style={{background: filter === "" ? "#5766ba" : ""}}>All</Button>
+                    <Button onClick={() => setFilter("live")} style={{background: filter === "live" ? "#5766ba" : ""}}>Shows</Button>
+                    <Button onClick={() => setFilter("artwork")} style={{background: filter === "artwork" ? "#5766ba" : ""}}>Artwork</Button>
+                    <Button onClick={() => setFilter("other")} style={{background: filter === "other" ? "#5766ba" : ""}}>Other</Button>
                 </Button.Group>
             </div>
             <div className="photos-container">
