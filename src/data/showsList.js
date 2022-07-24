@@ -46,16 +46,16 @@ export const showsList = [
     //     // eventLink: "https://www.facebook.com/events/330479492353926",
     //     address: "670 W Station St, Kankakee, IL 60901"
     // },
-    {
-        date: "7/8/22",
-        venue: "The WC Social Club",
-        time: "Doors @ 6:00PM",
-        cover: "$12 advanced tickets, $15 @ door",
-        ticketLink : "https://skeletix.com/1614-sounds-like-summer-at-west-chicago-social-c/",
-        venueLink: "https://www.thewcsocialclub.com/",
-        eventLink: "https://www.facebook.com/events/543053777450572",
-        address: "2033 W. North Ave. Chicago, IL 60647"
-    },
+    // {
+    //     date: "7/8/22",
+    //     venue: "The WC Social Club",
+    //     time: "Doors @ 6:00PM",
+    //     cover: "$12 advanced tickets, $15 @ door",
+    //     ticketLink : "https://skeletix.com/1614-sounds-like-summer-at-west-chicago-social-c/",
+    //     venueLink: "https://www.thewcsocialclub.com/",
+    //     eventLink: "https://www.facebook.com/events/543053777450572",
+    //     address: "2033 W. North Ave. Chicago, IL 60647"
+    // },
     // {
     //     date: "4/22/22",
     //     venue: "Gallery Cabaret",
@@ -64,4 +64,14 @@ export const showsList = [
     //     venueLink: "https://www.gallerycabaret.com/",
     //     address: "2020 N Oakley Ave, Chicago, IL 60647"
     // },
+    {
+        date: "8/26/22",
+        venue: "The WC Social Club",
+        time: "Doors @ 6:00PM",
+        cover: "$15-- Purchase tickets directly through us",
+        // ticketLink : "Please purchase tickets directly through us",
+        venueLink: "https://www.thewcsocialclub.com/",
+        eventLink: "https://www.facebook.com/events/4867979266660871?ref=110",
+        address: "2033 W. North Ave. Chicago, IL 60647"
+    },
 ]
